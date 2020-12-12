@@ -1,0 +1,90 @@
+:root {
+    font-size: calc(1.5vw + 1em);
+    /*--active-color: #d5e5fc;*/ /*BG1*/
+    --active-color: #e2b89f; /*BG2*/
+    --standart-color: #121212;
+}
+
+body {
+    margin: 0;
+    font-style: none;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--standart-color);
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {margin: 0;}
+
+p {font-size: 0.7rem;}
+
+a {text-decoration: none; color: var(--standart-color);}
+
+.curs {font-family: 'Caveat', cursive;}
+
+.intro {
+    height: 30rem;
+    color: #fff;
+    background: #666 url("../photos/bg2.jpg") center no-repeat;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+
+.intro-title {
+    font-size: 1.3rem;
+    color: #888;
+    font-weight: none;
+    font-family: 'Caveat', cursive;
+    text-transform: uppercase;
+}
+
+.main {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro-subtitle {font-size: 0.9rem;}
+
+.intro > .content {padding: 7rem 1rem 0; max-width: calc(100vw - 2rem);}
+
+.music > .content {
+    width: 90%;
+    margin: 0 auto;
+    max-width: calc(100vw - 2rem);
+}
+
+header.intro {height: calc(16rem + 3vh);}
+
+a.main-link {
+    color: #fff;
+    transition: color .2s linear
+}
+
+a.main-link:hover {color: var(--active-color);}
+
+.music-block {
+    display: flex; 
+    flex-direction: column;
+    margin-bottom: 1.3rem;
+}
+
+.song {
+    width: 15rem;
+    max-width: calc(100vw - 2rem);
+    height: 1.4rem;
+}
+
+.music-number {margin: 0.2rem 0.7rem 0 0;}
+
+.music-title {font-weight: normal; font-size: 0.8rem;}
+
+.music-title > a {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    transition: color .2s linear;
+}
+
+.music-title > a:hover {
+    color: var(--active-color)
+}
