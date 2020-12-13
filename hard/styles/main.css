@@ -81,11 +81,21 @@ section.information {padding: 2rem 0 3rem;}
 
 img.biggest-bike {width: 70%;}
 
-img.smallest-bike {width: 100%;}
+.smallest-bike {
+    width: 100%;
+    height: 5.9rem;
+    background: url(../photos/bikes/bike-1/second.png) center no-repeat;
+    background-size: cover;
+}
 
-section.bike {padding: 1rem 0 1.5rem;}
+.second {
+    background: url(../photos/bikes/bike-2/second.png) center no-repeat;
+    background-size: cover;
+}
 
-@media (max-width: 660px) {
+section.bike {padding: 1rem 0 2.5rem;}
+
+@media (max-width: 800px) {
     .bikes-block {flex-direction: column;}
 
     img.biggest-bike {width: 100%;}
