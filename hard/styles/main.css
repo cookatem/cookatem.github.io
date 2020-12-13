@@ -18,8 +18,8 @@ header.intro {
 
 nav.intro-nav {
     padding-top: 1rem;
-    text-align: center;
     display: flex;
+    text-align: center;
     justify-content: center;
 }
 
@@ -29,7 +29,7 @@ nav.intro-nav {
 
 .left > a {margin-right: .9rem;}
 
-.rigth > a {margin-left: .9rem;}
+.right > a {margin-left: .9rem;}
 
 .intro-navs > a {
     text-transform: uppercase;
@@ -40,7 +40,7 @@ nav.intro-nav {
 .intro-navs > a:hover {color: var(--active-color);}
 
 @media (max-width: 320px) {
-    .rigth > a {margin-left: .3rem;}
+    .right > a {margin-left: .3rem;}
 
     .left > a {margin-right: .3rem;}
 
@@ -48,4 +48,45 @@ nav.intro-nav {
         width: 1.5rem;
         height: 1.5rem;
     }
+}
+
+section.information {padding: 2rem 0 3rem;}
+
+.container {
+    width: 100%;
+    max-width: 18rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container > .icon {
+    margin-bottom: 0.5rem;
+    width: 1rem;
+}
+
+.container > .title {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.container > .description {
+    font-size: 0.4rem;
+    line-height: 2;
+}
+
+.bikes-block {display: flex;}
+
+img.biggest-bike {width: 70%;}
+
+img.smallest-bike {width: 100%;}
+
+section.bike {padding: 1rem 0 1.5rem;}
+
+@media (max-width: 660px) {
+    .bikes-block {flex-direction: column;}
+
+    img.biggest-bike {width: 100%;}
 }
