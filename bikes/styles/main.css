@@ -3,6 +3,7 @@
     --black-color: #4d4959;
     --active-color: #64c29e;
     --subtitle-color: #848789;
+    --subtitle-lighter: #d3d7d9;
     --bg-dark: #282f35;
 }
 
@@ -154,6 +155,45 @@ a.shop-button {
     text-transform: uppercase;
 }
 
+.stay-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0rem;
+    text-align: center;
+}
+
+.stay-container > img {width: 2.3rem; margin-bottom: 0.4rem;}
+
+.stay-container > p {font-size: 0.6rem; color: var(--subtitle-color);}
+
+.stay-description {margin-bottom: 0.2rem;}
+
+p.hint {font-size: 0.4rem; margin-bottom: 0.5rem; color: var(--subtitle-lighter);}
+
+.stay-form {
+    display: flex; 
+    justify-content: center; 
+    width: 30%; 
+    margin: 0 auto;}
+
+.stay-form > input {
+    width: 69%;
+    border: var(--subtitle-lighter) 1.5px solid;
+    margin-right: 1%;
+    font-size: 0.4rem;
+    color: var(--subtitle-color)
+}
+
+a.form-button {
+    width: 30%;
+    height: 1.3rem;
+    padding-top: 0.35rem;
+    background-color: var(--active-color);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.5rem;
+}
+
 @media (max-width: 800px) {
     .bikes-block {flex-direction: column;}
 
@@ -166,4 +206,10 @@ a.shop-button {
     section.works {flex-direction: column;}
 
     a.shop-button {font-size: 0.4rem; padding: 1.6em 2.5em;}
+    
+    .stay-form {flex-direction: column;}
+
+    .stay-form > input {width: 100%; height: 1.3rem;}
+
+    a.form-button {width: 100%;}
 }
