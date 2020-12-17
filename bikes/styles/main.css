@@ -158,7 +158,7 @@ a.shop-button {
 .stay-container {
     width: 100%;
     margin: 0 auto;
-    padding: 2rem 0rem;
+    padding: 2rem 0rem 2.5rem;
     text-align: center;
 }
 
@@ -194,6 +194,34 @@ a.form-button {
     font-size: 0.5rem;
 }
 
+footer {
+    background-color: #f7f7f7;
+    color: var(--subtitle-color);
+    padding: 2.3rem 0 2rem;
+}
+ 
+.footer-container {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.about-creating {display: flex; width: 37.5%; font-size: 0.6rem; padding-top: 1rem;}
+
+.yebo-logo {width: 1.4rem; height: 1rem;}
+
+.creating-description {margin-right: 0.3rem;}
+
+.footer-communicate {width: 25%; text-align: center; padding-top: 1rem;}
+
+.communicate-ico {margin-right: 0.15rem;}
+
+.footer-information {width: 37.5%; font-size: 0.45rem; padding-left: 20%;}
+
+p.main {font-size: 0.5rem; font-weight: bold;}
+
+p.cursive {font-style: italic;}
+
 @media (max-width: 800px) {
     .bikes-block {flex-direction: column;}
 
@@ -207,9 +235,17 @@ a.form-button {
 
     a.shop-button {font-size: 0.4rem; padding: 1.6em 2.5em;}
     
-    .stay-form {flex-direction: column;}
+    .stay-form {width: 60%; flex-direction: column;}
 
     .stay-form > input {width: 100%; height: 1.3rem;}
 
     a.form-button {width: 100%;}
+
+    .footer-container {flex-direction: column;}
+
+    .about-creating {width: 100%; justify-content: center;}
+
+    .footer-communicate {width: 100%; margin-bottom: 1rem;}
+
+    .footer-information {width: 100%; text-align: center; padding: 0;}
 }
