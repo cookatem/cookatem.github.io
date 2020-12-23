@@ -1,0 +1,99 @@
+:root {font-size: calc(1vw + 1em);}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7rem;
+}
+
+header.intro {
+    background: #fff url(../photos/bg.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: calc(50vh + 5em);
+}
+
+h1.intro--title {text-transform: uppercase; text-align: center;}
+
+.dices {padding-top: 1.5rem;}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    padding: 0 0 1.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.dice {
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+    border: #000 5px solid;
+    border-radius: 1rem;
+    display: flex;
+    padding: 2rem;
+}
+
+.number {
+    height: 0;
+    border: 0.8rem #000 solid;
+    background-color: #000;
+    border-radius: 1rem;
+}
+
+.column {display: flex; flex-direction: column;}
+
+.justify-start {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.justify-middle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.justify-end {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item-start {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.item-middle {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.item-end {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+@media (max-width: 610px) {
+    div.row {
+        flex-direction: column;
+        padding: 0;
+        max-width: 10rem;
+        margin: 0 auto;
+    }
+
+    div.dice {
+        margin-bottom: 1.5rem;
+    }
+}
