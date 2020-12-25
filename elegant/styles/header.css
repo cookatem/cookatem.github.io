@@ -55,7 +55,7 @@ header.main { background: #d4af37 url(../photos/main-bg.png) center no-repeat; b
 
 /*MOBILE*/
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
     .intro--menu {
         background-color: rgba(0, 0, 0, .7);

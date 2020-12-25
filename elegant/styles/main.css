@@ -25,7 +25,7 @@ section.information {
 	margin-bottom: 6rem;
 }
 
-section.medium {margin-bottom: 2rem;}
+section.medium { margin-bottom: 2rem; }
 
 .uncommon {
 	color: var(--special-color);
@@ -34,7 +34,7 @@ section.medium {margin-bottom: 2rem;}
 	margin-bottom: 0.4rem;
 }
 
-.information--title {margin-bottom: 0.9rem;}
+.information--title { margin-bottom: 0.9rem; }
 
 .information--subtitle {
 	font-size: 0.8rem;
@@ -81,9 +81,91 @@ section.medium {margin-bottom: 2rem;}
 
 .work-photos > .eig { background: var(--special-color) url(../photos/works/8.png) center no-repeat; background-size: cover; }
 
-@media (max-width: 700px) {
+.people-container {
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.people {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+	grid-gap: 0.3rem;
+	margin-bottom: 4rem;
+}
+
+.people-block {
+	height: 20rem;
+	width: 11.5rem;
+	background-color: #f9f9f9;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr auto;
+}
+
+.people-information { padding: 1rem; }
+
+.people-name { font-weight: normal; }
+
+.people-description {
+	margin-top: 1rem;
+	font-size: 0.7rem;
+}
+
+.tobias-photo { background: url(../photos/people/tobias.png) center no-repeat; background-size: cover; }
+
+.jack-photo { background: url(../photos/people/jack.png) center no-repeat; background-size: cover; }
+
+.ricki-photo { background: url(../photos/people/ricki.png) center no-repeat; background-size: cover; }
+
+.post-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 15rem;
+}
+
+.post {
+	margin-top: 14rem;
+	width: 35rem;
+	height: 30rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.post-image { background: url(../photos/post/poster.png) center no-repeat; background-size: cover; }
+
+.date { color: var(--standart-color); font-weight: normal; }
+
+.post-information { padding: 1rem; background-color: #f9f9f9; }
+
+.post--title {font-weight: normal;}
+
+.post--subtitle {font-size: 0.8rem; margin: 1rem 0 3rem;}
+
+.post-button {
+	height: 8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-column: 1 / 3;
+}
+
+@media (max-width: 768px) {
 	.work-photos > div {
 		height: 16rem;
 		grid-column: 1 / 5;
 	}
+
+	.people-block { grid-column: 1 / 4; }
+
+	.post {width: 90%;}
+
+	.post-image {grid-column: 1 / 3; height: 100%;}
+
+	.post-information { text-align: center; grid-column: 1 / 3;}
 }
