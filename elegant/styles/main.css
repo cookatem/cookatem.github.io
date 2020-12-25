@@ -1,8 +1,82 @@
-:root {
-    font-size: calc(0.5vh + 0.5vw + 0.8em);
+:root { 
+	font-size: calc(0.5vh + 0.5vw + 0.8em); 
+	--standart-color: #021725;
+	--special-color: #d4af37;
 }
 
 body {
     font-size: 1rem;
     font-family: 'Lato', sans-serif;
 }
+
+.main-container {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 3rem;
+}
+
+section.information {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	color: var(--standart-color);
+	margin-bottom: 6rem;
+}
+
+section.medium {margin-bottom: 2rem;}
+
+.uncommon {
+	color: var(--special-color);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	margin-bottom: 0.4rem;
+}
+
+.information--title {margin-bottom: 0.9rem;}
+
+.information--subtitle {
+	font-size: 0.8rem;
+	line-height: 1.3rem;
+	max-width: 30rem;
+}
+
+.button {
+	margin-top: 3rem;
+	padding: .7rem 1.3rem;
+	border: var(--standart-color) 2px solid;
+	font-size: 0.85rem;
+	transition: color .2s linear;
+	transition: background-color .2s linear;
+}
+
+.button:hover {
+	background-color: var(--standart-color);
+	color: #fff;
+}
+
+.work-photos {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 0.15rem;
+}
+
+.work-photos > div { height: 13rem; }
+
+.work-photos > .one { background: var(--special-color) url(../photos/works/1.png) center no-repeat; background-size: cover; }
+
+.work-photos > .two { background: var(--special-color) url(../photos/works/2.png) center no-repeat; background-size: cover; }
+
+.work-photos > .thr { background: var(--special-color) url(../photos/works/3.png) center no-repeat; background-size: cover; }
+
+.work-photos > .fou { background: var(--special-color) url(../photos/works/4.png) center no-repeat; background-size: cover; }
+
+.work-photos > .fiv { background: var(--special-color) url(../photos/works/5.png) center no-repeat; background-size: cover; }
+
+.work-photos > .six { background: var(--special-color) url(../photos/works/6.png) center no-repeat; background-size: cover; }
+
+.work-photos > .sev { background: var(--special-color) url(../photos/works/7.png) center no-repeat; background-size: cover; }
+
+.work-photos > .eig { background: var(--special-color) url(../photos/works/8.png) center no-repeat; background-size: cover; }

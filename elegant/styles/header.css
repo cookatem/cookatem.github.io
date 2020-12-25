@@ -1,7 +1,5 @@
-.intro {
-    color: #fff;
-    height: 35rem;
-}
+
+.intro { color: #fff; height: 35rem; }
 
 .intro--hat {
     display: flex;
@@ -15,9 +13,7 @@
     margin-left: 5%;
 }
 
-.intro--logo > img {
-    width: 8rem;
-}
+.intro--logo > img { width: 8rem; }
 
 .intro--menu {
     width: 20%; 
@@ -32,18 +28,9 @@
     margin-right: 0.2rem;
 }
 
-.intro--menu > .menu-img {
-    width: 1rem;
-}
+.intro--menu > .menu-img { width: 1rem; }
 
-/*MODILE*/
-
-header.main {
-    background: #fff url(../photos/main-bg.png) center no-repeat;
-    background-size: cover;
-}
-
-.container {
+.header-container {
     width: 90%;
     margin: 0 auto;
 }
@@ -62,6 +49,12 @@ header.main {
     font-style: italic;
 }
 
+/*BACKGROUNDS*/
+
+header.main { background: #d4af37 url(../photos/main-bg.png) center no-repeat; background-size: cover; }
+
+/*MOBILE*/
+
 @media (max-width: 700px) {
 
     .intro--menu {
@@ -71,8 +64,14 @@ header.main {
 
     .intro--hat {
         background-color: rgba(0, 0, 0, .5);
+        width: 100%;
+        position: fixed;
         padding: 0;
     }
+
+    .header-container { padding-top: 3.8rem; }
+
+    .intro--title { height: 100%; }
 
     .intro--menu > a:not([class = "menu-img"]) {
         font-size: 0;
