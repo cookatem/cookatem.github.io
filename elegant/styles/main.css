@@ -80,3 +80,10 @@ section.medium {margin-bottom: 2rem;}
 .work-photos > .sev { background: var(--special-color) url(../photos/works/7.png) center no-repeat; background-size: cover; }
 
 .work-photos > .eig { background: var(--special-color) url(../photos/works/8.png) center no-repeat; background-size: cover; }
+
+@media (max-width: 700px) {
+	.work-photos > div {
+		height: 16rem;
+		grid-column: 1 / 5;
+	}
+}
