@@ -45,7 +45,7 @@ section.medium { margin-bottom: 2rem; }
 .button {
 	margin-top: 3rem;
 	padding: .7rem 1.3rem;
-	border: var(--standart-color) 2px solid;
+	border: var(--standart-color) 1px solid;
 	font-size: 0.85rem;
 	transition: color .2s linear;
 	transition: background-color .2s linear;
@@ -141,11 +141,11 @@ section.medium { margin-bottom: 2rem; }
 
 .date { color: var(--standart-color); font-weight: normal; }
 
-.post-information { padding: 1rem; background-color: #f9f9f9; }
+.post-information { padding: 1rem 1rem 1.5rem; background-color: #f9f9f9; }
 
-.post--title {font-weight: normal;}
+.post--title { font-weight: normal; }
 
-.post--subtitle {font-size: 0.8rem; margin: 1rem 0 3rem;}
+.post--subtitle { font-size: 0.8rem; margin: 1rem 0 3rem; }
 
 .post-button {
 	height: 8rem;
@@ -167,5 +167,5 @@ section.medium { margin-bottom: 2rem; }
 
 	.post-image {grid-column: 1 / 3; height: 100%;}
 
-	.post-information { text-align: center; grid-column: 1 / 3;}
+	.post-information { grid-column: 1 / 3;}
 }
