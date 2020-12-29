@@ -105,5 +105,15 @@
                 </div>
             </div>
         </main>
+        <script src = "https://code.jquery.com/jquery-2.1.0.js"></script>
+        <script>
+            var tags = ["p", ".intro--hat", "h1", "h2", "h3", "h4", "a", "img"];
+            for (var i = 0; i < tags.length; i++) {
+                $(tags[i]).fadeOut(0);
+            }
+            for (i = 0; i < tags.length; i++) {
+                $(tags[i]).fadeIn(1000);
+            }
+        </script>
     </body>
 </html>
