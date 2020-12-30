@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Timer</title>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0">
+		<link href = "styles/style.css" rel = "stylesheet" type = "text/css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap" 
+        rel="stylesheet">
+	</head>
+	<body>
+		<main class = "main">
+			<h1 class = "header">Timer</h1>
+			<p class = "timer">
+				<span id = "minutes">0</span> :
+				<span id = "seconds">0</span>
+			</p>
+			<script src = "https://code.jquery.com/jquery-2.1.0.js"></script>
+			<script type="text/javascript">
+				$("main").hide().fadeIn(2000);
+				var time = 0;
+				var minutes = 0;
+				var mins = document.getElementById("minutes");
+				var secs = document.getElementById("seconds");
+
+				var Timer = function () {
+					time++;
+					minutes += Math.floor(time / 60);
+					if (time == 60) {
+						time = 0;
+					}
+
+					secs.innerHTML = time;	
+					mins.innerHTML = minutes;
+				}
+
+				var id = setInterval(Timer, 1000);
+			</script>
+		</main>
+	</body>
+</html>
