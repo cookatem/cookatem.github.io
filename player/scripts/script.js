@@ -6,7 +6,10 @@ var songs = {
 }
 
 var place_id = 4; //Song
-var click = 0, now_seconds = 0, now_minutes = 0, line_length = 0;
+var click = 0;
+var now_seconds = 0; 
+var now_minutes = 0; 
+var line_length = 0;
 
 function Song(arr) {
     return [place_id, arr[place_id]];
@@ -50,7 +53,10 @@ function PlaySong() {
 
 
 
-var now_length = 0, distance = 0, length_x = 0, max_length = 0;
+var now_length = 0;
+var distance = 0; 
+var length_x = 0; 
+var max_length = 0;
 
 var line_obj = document.querySelector("#player-line");
 $("#player-line").click(function (event) {
