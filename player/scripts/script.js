@@ -5,11 +5,8 @@ var songs = {
     "4": ["Rockstar", "Post Malone", "music/rockstar.mp3", "3:38"]
 }
 
-var line_length = 0;
 var place_id = 4; //Song
-var click = 0;
-var now_seconds = 0;
-var now_minutes = 0;
+var click = 0, now_seconds = 0, now_minutes = 0, line_length = 0;
 
 function Song(arr) {
     return [place_id, arr[place_id]];
@@ -43,6 +40,9 @@ function PlaySong() {
             now_minutes = Math.floor(now_seconds / 60);
             document.getElementById("now-seconds").innerHTML = now_seconds - 60 * now_minutes;
             document.getElementById("now-minutes").innerHTML = now_minutes;
+            if (now_seconds - 60 * now_minutes <= 9) {
+                document.getElementById("now-seconds").innerHTML = "0" + (now_seconds - 60 * now_minutes).toString(10);
+            }
 
         }, 100);
     }
@@ -50,10 +50,7 @@ function PlaySong() {
 
 
 
-var now_length = 0;
-var distance = 0;
-var length_x = 0;
-var max_length = 0;
+var now_length = 0, distance = 0, length_x = 0, max_length = 0;
 
 var line_obj = document.querySelector("#player-line");
 $("#player-line").click(function (event) {
@@ -63,7 +60,7 @@ $("#player-line").click(function (event) {
     distance = length_x - now_length;
     time = audio.currentTime + distance * (audio.duration / max_length);
     audio.currentTime = time;
-});
+})
 
 function playAgain () {
     audio.currentTime = 0;

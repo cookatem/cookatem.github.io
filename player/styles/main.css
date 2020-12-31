@@ -77,8 +77,8 @@ main > .head {
     position: relative;
     top: -0.6vh;
     left: 0;
+    height: 0.8vh;
     width: var(--line_playing_length);
-    height: 0.7vh;
     background-color: var(--main-color);
 }
 
