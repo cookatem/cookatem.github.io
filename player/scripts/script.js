@@ -66,7 +66,8 @@ $("#player-line").click(function (event) {
     distance = length_x - now_length;
     time = audio.currentTime + distance * (audio.duration / max_length);
     audio.currentTime = time;
-})
+    last_place = time;
+});
 
 function playAgain () {
     audio.currentTime = 0;
