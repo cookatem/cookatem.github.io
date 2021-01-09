@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Blog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href = "styles/reset.css" rel = "stylesheet" type = "text/css">
+        <link href = "styles/animation.css" rel = "stylesheet" type = "text/css">
+        <link href = "styles/main.css" rel = "stylesheet" type = "text/css">
+    </head>
+    <body>
+        <header>
+            <div class = "container">
+                <nav>
+                    <div class = "user-avatar">
+                        <img class = "avatar__img" src = "photos/avatar.png" alt = "User Avatar">
+                        <div class = "avatar__user-status"></div>
+                    </div>
+                    <ul class = "nav__links">
+                        <li><a href = "#" class = "active">Главная</a></li>
+                        <li><a href = "#">О нас</a></li>
+                        <li><a href = "#">Контакты</a></li>
+                        <li class = "search" onclick="ShowModalWindow()">Поиск</li>
+                        <li class = "phone-number"><img class = "phone-ico" src = "photos/phone-ico.png" alt = "Phone ico">+7 (987) 887-87</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class = "search-window hide" id = "modal_window">
+                <div class = "search-window__block">
+                    <label class = "close_modal_window_block" onclick="HideModalWindow()" id = "close">
+                        <div class = "close_modal_window_block_line first" id = "close1"></div>
+                        <div class = "close_modal_window_block_line second" id = "close2"></div>
+                    </label>
+                </div>
+            </div>
+            <div class = "header__background-image"></div>
+            <script src = "scripts/modal.js" type = "text/javascript"></script>
+            <div class = "b"></div>
+        </header>
+    </body>
+</html>
