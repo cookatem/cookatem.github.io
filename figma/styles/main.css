@@ -96,22 +96,63 @@ a.active {
     opacity: 1;
 }
 
-.search-window.hidden {
-    animation: modal_window_hide .3s ease-in-out;
-}
+.search-window.hidden { animation: modal_window_hide .3s ease-in-out; }
 
 .animation_close1 { animation: block_line_first .3s ease-in-out; }
 .animation_close2 { animation: block_line_second .3s ease-in-out; }
 
 .search-window__block {
+    padding: 0 1vw;
     position: fixed;
     z-index: 9999;
     top: 15%;
-    bottom: 70%;
+    bottom: 68%;
     left: 5%;
     right: 5%;
     background-color: #fff;
     border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    margin: 0 .3rem 0 0;
+    width: 80%;
+    height: 45%;
+    border: 2px #fff solid;
+    border-radius: .6rem;
+    background-color: #EDEDED;
+    padding: 0 1rem;
+    transition: border .1s linear;
+    font-size: .7rem;
+    font-family: 'Futura PT', 'Montserrat', sans-serif;
+}
+
+.input:focus {
+    outline: none;
+    border: 2px #5D71DD solid;
+}
+
+.input-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    min-width: 19%;
+    height: 45%;
+    border: 0;
+    border-radius: .7rem;
+    background-color: #5D71DD;
+    color: #fff;
+    font-size: .8rem;
+    font-family: 'Futura PT', 'Montserrat', sans-serif;
+}
+
+.search-icon {margin-left: .3rem; width: .7rem;}
+
+.input-submit:focus {
+    outline: none;
 }
 
 .close_modal_window_block {
@@ -136,6 +177,12 @@ a.active {
 .second { transform: rotate(315deg); }
 
 @media (max-width: 625px) {
+    .search-window__block {flex-direction: column; bottom: 60%; justify-content: center; align-items: center;}
+
+    .input {width: 100%; height: 35%; margin: 0 0 .3rem 0;}
+
+    .input-submit {width: 80%; height: 25%;}
+
     .user-avatar {
         transform: translateX(.5rem);
         margin-bottom: .8rem;
@@ -147,7 +194,11 @@ a.active {
 }
 
 .header__background-image {
-    width: 100%;
+    width: 100vw;
+    background-color: #f7f7f7;
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
     height: 13rem;
     background: #C9C9C9 url("../photos/main-bg.jpg") center no-repeat;
     background-size: cover;

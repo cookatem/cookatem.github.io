@@ -11,8 +11,8 @@
         <link href = "styles/main.css" rel = "stylesheet" type = "text/css">
     </head>
     <body>
-        <header>
-            <div class = "container">
+        <div class = "container">
+            <header>
                 <nav>
                     <div class = "user-avatar">
                         <img class = "avatar__img" src = "photos/avatar.png" alt = "User Avatar">
@@ -26,18 +26,20 @@
                         <li class = "phone-number"><img class = "phone-ico" src = "photos/phone-ico.png" alt = "Phone ico">+7 (987) 887-87</li>
                     </ul>
                 </nav>
-            </div>
-            <div class = "search-window hide" id = "modal_window">
-                <div class = "search-window__block">
-                    <label class = "close_modal_window_block" onclick="HideModalWindow()" id = "close">
-                        <div class = "close_modal_window_block_line first" id = "close1"></div>
-                        <div class = "close_modal_window_block_line second" id = "close2"></div>
-                    </label>
+                <div class = "search-window hide" id = "modal_window">
+                    <div class = "search-window__block">
+                        <input type = "text" class = "input" placeholder = "Введите что-нибудь...">
+                        <label type = "submit" class = "input-submit"><p>Найти</p><img src = "photos/search.png" class = "search-icon" alt = "search"></label>
+                        <label class = "close_modal_window_block" onclick="HideModalWindow()" id = "close">
+                            <div class = "close_modal_window_block_line first" id = "close1"></div>
+                            <div class = "close_modal_window_block_line second" id = "close2"></div>
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <div class = "header__background-image"></div>
-            <script src = "scripts/modal.js" type = "text/javascript"></script>
+                <script src = "scripts/modal.js" type = "text/javascript"></script>
+                <div class = "header__background-image"></div>
+            </header>
             <div class = "b"></div>
-        </header>
+        </div>
     </body>
 </html>
