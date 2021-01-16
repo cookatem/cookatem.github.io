@@ -179,7 +179,7 @@ a.active {
 @media (max-width: 625px) {
     .search-window__block {flex-direction: column; bottom: 60%; justify-content: center; align-items: center;}
 
-    .input {width: 100%; height: 35%; margin: 0 0 .3rem 0;}
+    .input {width: 80%; height: 35%; margin: 0 0 .3rem 0;}
 
     .input-submit {width: 80%; height: 25%;}
 
