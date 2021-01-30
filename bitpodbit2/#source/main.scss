@@ -7,17 +7,10 @@ body {
 
 // LAYOUT
 .container {
-    background: #444 url(../img/main-bg3.jpg) center no-repeat;
+    background: #444 url(../img/main-bg4.jpg) center no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    height: 100%;
-}
-
-.blur-container { 
-    backdrop-filter: blur(5px);
-    height: 100%;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .6);
+    min-height: 100vh;
 }
 
 // MEDIA
@@ -43,6 +36,7 @@ header { display: flex; padding: 1rem; }
     display: flex;
     height: auto;
 
+    // Top List
     .music_top_list__container {
         width: 60%;
         overflow-x: hidden;
@@ -50,13 +44,15 @@ header { display: flex; padding: 1rem; }
 
     .music_top_list {
         width: calc(100% + 30px);
-        max-height: 60vh;
-        overflow-y: auto;
         overflow-x: hidden;
 
-        &:-webkit-scrollbar { width:0px; }
+        @media (min-width: 770px) {
+            overflow-y: auto;
+            max-height: 59vh;
+        }
 
         .music_top_list__block {
+            margin-bottom: .2rem;
             cursor: pointer;
             padding: .3rem;
             display: flex;
@@ -69,8 +65,12 @@ header { display: flex; padding: 1rem; }
         }
     }
 
+    // Player
     .music_player {
         width: 40%;
+        transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+        transform: translateX(.7rem);
+        opacity: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -85,11 +85,16 @@ header { display: flex; padding: 1rem; }
             font-size: 1.2rem; font-weight: normal;
         }
     }
+
+    .active { opacity: 1; transform: translateX(0); }
 }
 
+.close_icon { display: none; }
+
+// Mobile Version
 @media (max-width: 769px) {
     body {
-        height: 100vh;
+        height: auto;
 
         .container {
             width: 100%;
@@ -105,25 +110,25 @@ header { display: flex; padding: 1rem; }
         overflow-x: hidden;
         display: block;
 
-        .music_top_list {
-            height: auto !important;
-            overflow-y: visible;
-            max-height: auto !important;
-            width: 100% !important;
-        }
+        // Top List
+        .music_top_list { width: 100% !important; }
 
+        // Player
         .music_player {
             position: fixed;
-            width: auto !important;
-            overflow-x: hidden;
+            overflow: hidden;
+            opacity: 1;
+            transform: translateX(0);
+            width: 100vw !important;
             top: 0;
-            transition: left .7s ease-in-out;
             left: 100vw;
             right: 0;
             bottom: 0;
+            transition: left .7s ease-in-out !important;
             background-color: #444;
 
             .close_icon {
+                display: block;
                 position: absolute;
                 z-index: 100;
                 top: .4rem;

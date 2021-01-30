@@ -8,18 +8,10 @@ body {
 }
 
 .container {
-	background: #444 url(../img/main-bg3.jpg) center no-repeat;
+	background: #444 url(../img/main-bg4.jpg) center no-repeat;
+	background-attachment: fixed;
 	background-size: cover;
-	height: 100%;
-}
-
-.blur-container {
-	-webkit-backdrop-filter: blur(5px);
-	        backdrop-filter: blur(5px);
-	height: 100%;
-	height: 100vh;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.6);
+	min-height: 100vh;
 }
 
 header {
@@ -52,14 +44,16 @@ header {
 }
 .music_content .music_top_list {
 	width: calc(100% + 30px);
-	max-height: 60vh;
-	overflow-y: auto;
 	overflow-x: hidden;
 }
-.music_content .music_top_list:-webkit-scrollbar {
-	width: 0px;
+@media (min-width: 770px) {
+	.music_content .music_top_list {
+		overflow-y: auto;
+		max-height: 59vh;
+	}
 }
 .music_content .music_top_list .music_top_list__block {
+	margin-bottom: 0.2rem;
 	cursor: pointer;
 	padding: 0.3rem;
 	display: flex;
@@ -82,6 +76,9 @@ header {
 }
 .music_content .music_player {
 	width: 40%;
+	transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+	transform: translateX(0.7rem);
+	opacity: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -101,10 +98,18 @@ header {
 	font-size: 1.2rem;
 	font-weight: normal;
 }
+.music_content .active {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.close_icon {
+	display: none;
+}
 
 @media (max-width: 769px) {
 	body {
-		height: 100vh;
+		height: auto;
 	}
 	body .container {
 		width: 100%;
@@ -120,23 +125,23 @@ header {
 		display: block;
 	}
 	.music_content .music_top_list {
-		height: auto !important;
-		overflow-y: visible;
-		max-height: auto !important;
 		width: 100% !important;
 	}
 	.music_content .music_player {
 		position: fixed;
-		width: auto !important;
-		overflow-x: hidden;
+		overflow: hidden;
+		opacity: 1;
+		transform: translateX(0);
+		width: 100vw !important;
 		top: 0;
-		transition: left 0.7s ease-in-out;
 		left: 100vw;
 		right: 0;
 		bottom: 0;
+		transition: left 0.7s ease-in-out !important;
 		background-color: #444;
 	}
 	.music_content .music_player .close_icon {
+		display: block;
 		position: absolute;
 		z-index: 100;
 		top: 0.4rem;
