@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-	background: #444 url(../img/main-bg4.jpg) center no-repeat;
+	background: #444 url(../img/main-bg.jpg) center no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	min-height: 100vh;
@@ -17,18 +17,6 @@ body {
 header {
 	display: flex;
 	padding: 1rem;
-}
-
-.logo {
-	font-family: "Indie Flower", cursive;
-	font-size: 1.4rem;
-	color: #fff;
-	margin-right: 0.3rem;
-	transition: transform 0.2s ease-in-out;
-}
-
-.logo:hover {
-	transform: translateY(-0.1rem);
 }
 
 .music_content {
@@ -52,55 +40,82 @@ header {
 		max-height: 59vh;
 	}
 }
-.music_content .music_top_list .music_top_list__block {
+
+.music_player {
+	width: 40%;
+	transform: translateX(0.7rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.logo {
+	font-family: "Indie Flower", cursive;
+	font-size: 1.4rem;
+	color: #fff;
+	margin-right: 0.3rem;
+	transition: transform 0.2s ease-in-out;
+}
+
+.logo:hover {
+	transform: translateY(-0.1rem);
+}
+
+.music_player {
+	transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+	opacity: 0;
+}
+.music_player .music_player__image {
+	width: 15rem;
+	height: 15rem;
+	border-radius: 0.4rem;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+	opacity: 0.9;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.music_player .music_player__music_play {
+	padding: 0.8rem 0.4rem 0;
+}
+.music_player .music_play__music-title {
+	font-size: 1.2rem;
+	font-weight: normal;
+}
+.music_player .music_play__music-author {
+	font-size: 0.9rem;
+	color: #cddfd9;
+	font-weight: normal;
+}
+
+.active {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.music_top_list__block {
 	margin-bottom: 0.2rem;
 	cursor: pointer;
 	padding: 0.3rem;
 	display: flex;
 	align-items: center;
 }
-.music_content .music_top_list .music_top_list__block h3, .music_content .music_top_list .music_top_list__block h4 {
+.music_top_list__block h3, .music_top_list__block h4 {
 	font-weight: normal;
 }
-.music_content .music_top_list .music_top_list__block .block__music_place {
+.music_top_list__block .block__music_place {
 	margin-right: 0.7rem;
 	font-size: 0.9rem;
 	font-family: "Indie Flower", cursive;
 }
-.music_content .music_top_list .music_top_list__block .block_information__music_title {
+.music_top_list__block .block_information__music_title {
 	font-size: 1.1rem;
 }
-.music_content .music_top_list .music_top_list__block .block_information__music_author {
+.music_top_list__block .block_information__music_author {
 	font-size: 0.7rem;
 	color: #cddfd9;
-}
-.music_content .music_player {
-	width: 40%;
-	transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-	transform: translateX(0.7rem);
-	opacity: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center !important;
-	text-align: center;
-}
-.music_content .music_player .music_player__image {
-	max-width: 13rem;
-	border-radius: 0.4rem;
-	box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-	opacity: 0.9;
-}
-.music_content .music_player .music_player__music_play {
-	padding: 0.8rem 0.4rem 0;
-}
-.music_content .music_player .music_play__music-title {
-	font-size: 1.2rem;
-	font-weight: normal;
-}
-.music_content .active {
-	opacity: 1;
-	transform: translateX(0);
 }
 
 .close_icon {
@@ -116,15 +131,14 @@ header {
 		height: 100%;
 	}
 
-	.music_top_list__container {
-		width: 100% !important;
-	}
-
 	.music_content {
 		overflow-x: hidden;
 		display: block;
 	}
 	.music_content .music_top_list {
+		width: 100% !important;
+	}
+	.music_content .music_top_list__container {
 		width: 100% !important;
 	}
 	.music_content .music_player {
@@ -139,6 +153,10 @@ header {
 		bottom: 0;
 		transition: left 0.7s ease-in-out !important;
 		background-color: #444;
+	}
+	.music_content .music_player .music_player__image {
+		width: 10rem;
+		height: 10rem;
 	}
 	.music_content .music_player .close_icon {
 		display: block;

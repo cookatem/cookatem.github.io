@@ -1,33 +1,20 @@
 :root { font-size: calc( 1em + .5em ); }
 
+// LAYOUT
+
 body {
     font-family: 'Exo 2', sans-serif;
     color: #fff;
 }
 
-// LAYOUT
 .container {
-    background: #444 url(../img/main-bg4.jpg) center no-repeat;
+    background: #444 url(../img/main-bg.jpg) center no-repeat;
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
 }
 
-// MEDIA
-
 header { display: flex; padding: 1rem; }
-
-.logo {
-    font-family: 'Indie Flower', cursive;
-    font-size: 1.4rem;
-    color: #fff;
-    margin-right: .3rem;
-    transition: transform .2s ease-in-out;
-}
-
-.logo:hover {
-    transform: translateY(-.1rem);
-}
 
 .music_content {
     max-width: 1300px;
@@ -50,43 +37,72 @@ header { display: flex; padding: 1rem; }
             overflow-y: auto;
             max-height: 59vh;
         }
+    }
+}
 
-        .music_top_list__block {
-            margin-bottom: .2rem;
-            cursor: pointer;
-            padding: .3rem;
-            display: flex;
-            align-items: center;
+.music_player {
+    width: 40%;
+    transform: translateX(.7rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-            h3, h4 { font-weight: normal; }
-            .block__music_place { margin-right: .7rem; font-size: .9rem; font-family: 'Indie Flower', cursive; }
-            .block_information__music_title { font-size: 1.1rem; }
-            .block_information__music_author { font-size: .7rem; color:#cddfd9 }
-        }
+// MEDIA
+
+.logo {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-right: .3rem;
+    transition: transform .2s ease-in-out;
+}
+
+.logo:hover {
+    transform: translateY(-.1rem);
+}
+
+.music_player {
+    transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+    opacity: 0;
+
+    .music_player__image { 
+        width: 15rem; 
+        height: 15rem;
+        border-radius: .4rem;
+        box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+        opacity: .9;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 
-    // Player
-    .music_player {
-        width: 40%;
-        transition: transform .4s ease-in-out, opacity .4s ease-in-out;
-        transform: translateX(.7rem);
-        opacity: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center !important;
-        text-align: center;
+    .music_player__music_play { padding: .8rem .4rem 0; }
 
-        .music_player__image { max-width: 13rem; border-radius: .4rem; box-shadow: 0 0 30px rgba(0, 0, 0, .3); opacity: .9; }
-
-        .music_player__music_play { padding: .8rem .4rem 0; }
-
-        .music_play__music-title {
-            font-size: 1.2rem; font-weight: normal;
-        }
+    .music_play__music-title {
+        font-size: 1.2rem; font-weight: normal;
     }
 
-    .active { opacity: 1; transform: translateX(0); }
+    .music_play__music-author {
+        font-size: .9rem; color:#cddfd9; font-weight: normal;
+    }
+}
+
+.active { opacity: 1; transform: translateX(0); }
+
+.music_top_list__block {
+    margin-bottom: .2rem;
+    cursor: pointer;
+    padding: .3rem;
+    display: flex;
+    align-items: center;
+
+    h3, h4 { font-weight: normal; }
+    .block__music_place { margin-right: .7rem; font-size: .9rem; font-family: 'Indie Flower', cursive; }
+    .block_information__music_title { font-size: 1.1rem; }
+    .block_information__music_author { font-size: .7rem; color:#cddfd9 }
 }
 
 .close_icon { display: none; }
@@ -102,16 +118,13 @@ header { display: flex; padding: 1rem; }
         }
     }
 
-    .music_top_list__container {
-        width: 100% !important;
-    }
-
     .music_content {
         overflow-x: hidden;
         display: block;
 
         // Top List
         .music_top_list { width: 100% !important; }
+        .music_top_list__container { width: 100% !important; }
 
         // Player
         .music_player {
@@ -126,6 +139,8 @@ header { display: flex; padding: 1rem; }
             bottom: 0;
             transition: left .7s ease-in-out !important;
             background-color: #444;
+
+            .music_player__image { width: 10rem; height: 10rem; }
 
             .close_icon {
                 display: block;

@@ -22,71 +22,71 @@
                 <div class = "music_top_list__container">
                     <div class = "music_top_list">
 
-                        <label class = "music_top_list__block" onclick = "MobileModalShow('modal_window', 'active', true)">
-                            <div class = "block__music_place">1</div>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 1)">
+                            <div class = "block__music_place" id = "1">1</div>
                             <div class = "block_information">
                                 <h3 class = "block_information__music_title">Moonlight</h3>
                                 <h4 class = "block_information__music_author">xxxTentacon</h4>
                             </div>
                         </label>
-                        <label class = "music_top_list__block" onclick = "MobileModalShow('modal_window', 'active', true)">
-                            <div class = "block__music_place">2</div>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 2)">
+                            <div class = "block__music_place" id = "2">2</div>
                             <div class = "block_information">
                                 <h3 class = "block_information__music_title">Районы - Кварталы</h3>
                                 <h4 class = "block_information__music_author">Звери</h4>
                             </div>
                         </label>
-                        <label class = "music_top_list__block" onclick = "MobileModalShow('modal_window', 'active', true)">
-                            <div class = "block__music_place">3</div>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 3)">
+                            <div class = "block__music_place" id = "3">3</div>
                             <div class = "block_information">
                                 <h3 class = "block_information__music_title">Батарейка</h3>
                                 <h4 class = "block_information__music_author">Жуки</h4>
                             </div>
                         </label>
-                        <label class = "music_top_list__block" onclick = "MobileModalShow('modal_window', 'active', true)">
-                            <div class = "block__music_place">4</div>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 4)">
+                            <div class = "block__music_place" id = "4">4</div>
                             <div class = "block_information">
                                 <h3 class = "block_information__music_title">Rockstar</h3>
                                 <h4 class = "block_information__music_author">Post Malone feat 21 Savage</h4>
                             </div>
                         </label>
-                        <label class = "music_top_list__block" onclick = "MobileModalShow('modal_window', 'active', true)">
-                            <div class = "block__music_place">5</div>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 5)">
+                            <div class = "block__music_place" id = "5">5</div>
                             <div class = "block_information">
                                 <h3 class = "block_information__music_title">Группа Крови</h3>
                                 <h4 class = "block_information__music_author">Цой</h4>
                             </div>
                         </label>
-                        <label class = "music_top_list__block" onclick = "MobileModalShow('modal_window', 'active', true)">
-                            <div class = "block__music_place">6</div>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 6)">
+                            <div class = "block__music_place" id = "6">6</div>
                             <div class = "block_information">
                                 <h3 class = "block_information__music_title">Believer</h3>
                                 <h4 class = "block_information__music_author">Imagine Dragons</h4>
                             </div>
                         </label>
-                        <label class = "music_top_list__block" onclick = "MobileModalShow('modal_window', 'active', true)">
-                            <div class = "block__music_place">7</div>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 7)">
+                            <div class = "block__music_place" id = "7">7</div>
                             <div class = "block_information">
                                 <h3 class = "block_information__music_title">Непохожие</h3>
                                 <h4 class = "block_information__music_author">Quest Pistols</h4>
                             </div>
                         </label>
-                        <label class = "music_top_list__block" onclick = "MobileModalShow('modal_window', 'active', true)">
-                            <div class = "block__music_place">8</div>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 8)">
+                            <div class = "block__music_place" id = "8">8</div>
                             <div class = "block_information">
                                 <h3 class = "block_information__music_title">Скр Скр Скр</h3>
                                 <h4 class = "block_information__music_author">Фараон</h4>
                             </div>
                         </label>
-                        <label class = "music_top_list__block" onclick = "MobileModalShow('modal_window', 'active', true)">
-                            <div class = "block__music_place">9</div>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 9)">
+                            <div class = "block__music_place" id = "9">9</div>
                             <div class = "block_information">
                                 <h3 class = "block_information__music_title">Девочка с Каре</h3>
                                 <h4 class = "block_information__music_author">Мукка</h4>
                             </div>
                         </label>
-                        <label class = "music_top_list__block" onclick = "MobileModalShow('modal_window', 'active', true)">
-                            <div class = "block__music_place">10</div>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 10)">
+                            <div class = "block__music_place" id = "10">10</div>
                             <div class = "block_information">
                                 <h3 class = "block_information__music_title">Вахтерам</h3>
                                 <h4 class = "block_information__music_author">Бумбокс</h4>
@@ -97,10 +97,11 @@
                 </div>
 
                 <div class = "music_player" id = "modal_window">
-                    <label class = "close_icon" onclick = "MobileModalShow('modal_window', 'active', false)">←</label>
-                    <img class = "music_player__image" id = "music_player__image" src = "img/songs/rockstar.jpg" alt = "Player Image">
+                    <label class = "close_icon" onclick = "ShowModal('modal_window', 'active', false)">←</label>
+                    <div class = "music_player__image" id = "music_player__image"></div>
                     <div class = "music_player__music_play">
-                        <h3 class = "music_play__music-title">Song Name</h3>
+                        <h3 class = "music_play__music-title" id = "song_name">Song Name</h3>
+                        <h4 class = "music_play__music-author" id = "song_author">Author</h4>
                     </div>
                 </div>
                 <script type = "text/javascript" src = "scripts/script.js"></script>
