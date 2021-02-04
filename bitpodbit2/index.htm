@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang = "ru">
+    <head>
+        <title>BitPodBit - Лучшие хиты 2020-2021 года</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com">
+        <link rel = "shortcut icon" href="img/icon.png">
+        <link href = "https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;1,200&family=Indie+Flower&family=Yusei+Magic&display=swap" rel = "stylesheet">
+        <link href = "styles/reset.css" rel = "stylesheet" type = "text/css">
+        <link href = "styles/main.css" rel = "stylesheet" type = "text/css">
+        <meta name = "description" content = "Хиты 2020-2021 года! BitPodBot https://vk.com/bitpodblt">
+        <meta name = "keywords" content = "BitPodBit, Топ музыки, Музыка, Хиты">
+        <meta name = "author" content = "BitPodBit - Maxim Byshyev">
+    </head>
+    <body>
+        <div class = "container">
+            <header>
+                <a class = "logo" href = "https://vk.com/bitpodblt" target = "_blank">BitPodBit</a>
+            </header>
+            <main class = "music_content">
+
+                <div class = "music_top_list__container">
+                    <div class = "music_top_list">
+
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 1)">
+                            <div class = "block__music_place">1</div>
+                            <div class = "block_information">
+                                <h3 class = "block_information__music_title">Moonlight</h3>
+                                <h4 class = "block_information__music_author">xxxTentacon</h4>
+                            </div>
+                        </label>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 2)">
+                            <div class = "block__music_place">2</div>
+                            <div class = "block_information">
+                                <h3 class = "block_information__music_title">Районы - Кварталы</h3>
+                                <h4 class = "block_information__music_author">Звери</h4>
+                            </div>
+                        </label>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 3)">
+                            <div class = "block__music_place">3</div>
+                            <div class = "block_information">
+                                <h3 class = "block_information__music_title">Батарейка</h3>
+                                <h4 class = "block_information__music_author">Жуки</h4>
+                            </div>
+                        </label>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 4)">
+                            <div class = "block__music_place">4</div>
+                            <div class = "block_information">
+                                <h3 class = "block_information__music_title">Rockstar</h3>
+                                <h4 class = "block_information__music_author">Post Malone feat 21 Savage</h4>
+                            </div>
+                        </label>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 5)">
+                            <div class = "block__music_place">5</div>
+                            <div class = "block_information">
+                                <h3 class = "block_information__music_title">Группа Крови</h3>
+                                <h4 class = "block_information__music_author">Цой</h4>
+                            </div>
+                        </label>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 6)">
+                            <div class = "block__music_place">6</div>
+                            <div class = "block_information">
+                                <h3 class = "block_information__music_title">Believer</h3>
+                                <h4 class = "block_information__music_author">Imagine Dragons</h4>
+                            </div>
+                        </label>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 7)">
+                            <div class = "block__music_place">7</div>
+                            <div class = "block_information">
+                                <h3 class = "block_information__music_title">Непохожие</h3>
+                                <h4 class = "block_information__music_author">Quest Pistols</h4>
+                            </div>
+                        </label>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 8)">
+                            <div class = "block__music_place">8</div>
+                            <div class = "block_information">
+                                <h3 class = "block_information__music_title">Скр Скр Скр</h3>
+                                <h4 class = "block_information__music_author">Фараон</h4>
+                            </div>
+                        </label>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 9)">
+                            <div class = "block__music_place">9</div>
+                            <div class = "block_information">
+                                <h3 class = "block_information__music_title">Девочка с Каре</h3>
+                                <h4 class = "block_information__music_author">Мукка</h4>
+                            </div>
+                        </label>
+                        <label class = "music_top_list__block" onclick = "ShowModal('modal_window', 'active', true, 10)">
+                            <div class = "block__music_place">10</div>
+                            <div class = "block_information">
+                                <h3 class = "block_information__music_title">Вахтерам</h3>
+                                <h4 class = "block_information__music_author">Бумбокс</h4>
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class = "music_player" id = "modal_window">
+                    <label class = "close_icon" onclick = "ShowModal('modal_window', 'active', false)">←</label>
+                    <div class = "music_player__image" id = "music_player__image"></div>
+                    <div class = "music_player__music_play">
+                        <h3 class = "music_play__music-title" id = "song_name">Song Name</h3>
+                        <h4 class = "music_play__music-author" id = "song_author">Author</h4>
+                        <div class = "music_player__music_play__line" id = "music_line">
+                            <div class = "music_max_line" id = "max_line"></div>
+                            <div class = "music_playing_line" id = "playing_line"></div>
+                            <div class = "music_playing_line__ball" id = "playing_line_ball"></div>
+                        </div>
+                        <div class = "muxic_play__buttons">
+                            <span class = "stop" id = "music_stop" onclick = "StopSong();">
+                                <span class = "column"></span>
+                                <span class = "column"></span>
+                            </span>
+                            <span class = "continue" id = "music_continue" onclick = "ContinueSong();"></span>
+                        </div>
+                    </div>
+                </div>
+                <script type = "text/javascript" src = "scripts/script.js"></script>
+            </main>
+        </div>
+    </body>
+</html>
