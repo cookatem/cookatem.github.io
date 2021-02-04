@@ -44,13 +44,11 @@ function Player (music_place) {
 
     if (audio.src.slice(audio.src.indexOf("music")) != songs_info[music_place - 1].song_src) {
         // Change or Start song
-        document.getElementById("music_player__image").classList.toggle("loading", true);
         audio.pause();
+        document.getElementById("playing_line").style.width = "0%";
         audio = new Audio(songs_info[music_place - 1].song_src);
         audio.autoplay = true;
     }
-
-    document.getElementById("music_player__image").classList.toggle("loading", false);
 
     if (document.getElementById("music_stop").classList.contains("active_button")) audio.pause();
     else document.getElementById("music_continue").classList.toggle("active_button", true);
