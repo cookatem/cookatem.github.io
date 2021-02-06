@@ -74,9 +74,10 @@ function ChangeInfo (music_place) {
     document.getElementById("music_player__image").style.backgroundImage = `url(${songs_info[music_place - 1].img_src})`;
     names_of_songs = document.getElementsByClassName("block_information__music_title");
     authors_of_songs = document.getElementsByClassName("block_information__music_author");
-    places_of_songs = document.getElementsByClassName("block__music_place");
     document.getElementById("song_name").innerText = names_of_songs[music_place - 1].innerText;
     document.getElementById("song_author").innerText = authors_of_songs[music_place - 1].innerText;
+    for (let i = 0; i < names_of_songs.length; i++) names_of_songs[i].style.color = "#ffffff";
+    names_of_songs[music_place - 1].style.color = "#B9B6AC";
 }
 
 function ShowModal (change_id, class_name, toggle, music_place) {

@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-	background: #444 url(../img/main-bg.jpg) center no-repeat;
+	background: #444 url(../img/main-bg2.jpg) center no-repeat;
 	background-size: cover;
 	min-height: 100vh;
 }
@@ -21,7 +21,7 @@ header {
 .music_content {
 	max-width: 1300px;
 	padding: 0.5rem;
-	margin: 5rem auto 0;
+	margin: 3.5rem auto 0;
 	display: flex;
 	height: auto;
 }
@@ -36,7 +36,7 @@ header {
 @media (min-width: 770px) {
 	.music_content .music_top_list {
 		overflow-y: auto;
-		max-height: 59vh;
+		max-height: 64vh;
 	}
 }
 
@@ -48,6 +48,9 @@ header {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	background-color: #373737;
+	border-radius: 1rem;
+	padding: 3rem;
 }
 
 .logo {
@@ -67,12 +70,13 @@ header {
 	opacity: 0;
 }
 .music_player .music_player__image {
-	width: 15rem;
-	height: 15rem;
+	min-width: 12rem;
+	min-height: 12rem;
 	transition: opacity 0.2s ease-in-out;
 	border-radius: 0.4rem;
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 	opacity: 0.9;
+	transition: all 0.2s ease-in-out;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -120,24 +124,23 @@ header {
 	width: 100%;
 	background-color: #fff;
 	height: 0.2rem;
-	border-radius: .1rem;
+	border-radius: 0.1rem;
 }
 .music_player .music_player__music_play__line .music_playing_line {
+	border-radius: 0.1rem;
 	width: 0%;
-	transform: translateX(-.04rem);
-	background-color: #97895E;
+	background-color: #958888;
 	height: 0.2rem;
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: .1rem;
 }
 .music_player .music_player__music_play__line .music_playing_line__ball {
 	content: "";
 	border-radius: 50%;
 	width: 0.6rem;
 	height: 0.6rem;
-	background-color: #97895E;
+	background-color: #958888;
 	position: absolute;
 	left: calc(0% - .3rem);
 	top: 0;
@@ -204,7 +207,7 @@ header {
 }
 .music_top_list__block .block_information__music_title {
 	font-size: 1.1rem;
-	transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.7s ease-in-out, color 0.2s ease-in-out;
 	margin-left: 1rem;
 }
 .music_top_list__block .block_information__music_author {
@@ -228,11 +231,14 @@ header {
 	body .container {
 		width: 100%;
 		height: 100%;
+		background: #444 url("../img/main_mobile-bg.jpg") center no-repeat;
+		background-size: cover;
 	}
 
 	.music_content {
 		overflow-x: hidden;
 		display: block;
+		margin: 5rem auto 0;
 	}
 	.music_content .music_top_list {
 		width: 100% !important;
@@ -252,6 +258,9 @@ header {
 		bottom: 0;
 		transition: left 0.7s ease-in-out !important;
 		background-color: #444;
+		border-radius: 0;
+		background-color: #373737;
+		padding: 0;
 	}
 	.music_content .music_player .music_player__image {
 		width: 10rem;
