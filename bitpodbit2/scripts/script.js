@@ -43,12 +43,18 @@ function StopSong () {
 function Player (music_place) {
 
     if (audio.src.slice(audio.src.indexOf("music")) != songs_info[music_place - 1].song_src) {
-        // Change or Start song
+        // Change song
+        document.getElementById("music_player__image").classList.toggle("loading", true);
         audio.pause();
         document.getElementById("playing_line").style.width = "0%";
+        document.getElementById("playing_line_ball").style.left = `calc(0% - .3rem)`;
         audio = new Audio(songs_info[music_place - 1].song_src);
         audio.autoplay = true;
     }
+
+    audio.addEventListener("canplaythrough", function () {
+        document.getElementById("music_player__image").classList.remove("loading");
+    });
 
     if (document.getElementById("music_stop").classList.contains("active_button")) audio.pause();
     else document.getElementById("music_continue").classList.toggle("active_button", true);
@@ -60,7 +66,7 @@ function Player (music_place) {
         last_place = audio.currentTime;
         document.getElementById("playing_line").style.width = width.toString(10) + "%";
         document.getElementById("playing_line_ball").style.left = `calc(${width}% - .3rem)`;
-    }, 100);
+    }, 1000);
 }
 
 // Show Information on Modal Window

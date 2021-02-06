@@ -120,16 +120,17 @@ header {
 	width: 100%;
 	background-color: #fff;
 	height: 0.2rem;
-	border-radius: 0.1rem;
+	border-radius: .1rem;
 }
 .music_player .music_player__music_play__line .music_playing_line {
-	border-radius: 0.1rem;
 	width: 0%;
+	transform: translateX(-.04rem);
 	background-color: #97895E;
 	height: 0.2rem;
 	position: absolute;
 	top: 0;
 	left: 0;
+	border-radius: .1rem;
 }
 .music_player .music_player__music_play__line .music_playing_line__ball {
 	content: "";
