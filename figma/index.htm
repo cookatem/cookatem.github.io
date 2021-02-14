@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "ru">
     <head>
-        <title>Our Blog - News 2021</title>
+        <title>Главная - Блоги 2021 года</title>
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0">
         <meta name = "description" content = "Блоги, новости о мире">
@@ -9,11 +9,11 @@
         <meta name = "author" content = "Maxim Byshyev">
         <link href = "styles/reset.css" rel = "stylesheet" type = "text/css">
         <link href = "styles/main.css" rel = "stylesheet" type = "text/css">
-        <script src = "scripts/sort_news.js" type = "text/javascript"></script>
+        <link href = "styles/layout.css" rel = "stylesheet" type = "text/css">
     </head>
     <body>
         <header class = "header">
-            <nav class = "header-nav">
+            <nav class = "header-nav main-container">
                 <label class = "user_avatar show">
                     <div class = "user_avatar__img"></div>
                     <div class = "user_avatar__status"></div>
@@ -41,5 +41,34 @@
         </div>
         <script src = "scripts/search.js" type = "text/javascript"></script>
         <script src = "scripts/script.js" type = "text/javascript"></script>
+        <main class = "news">
+            <div class = "grid_container">
+                <section class = "news_section" id = "news">
+                    <div class = "news_section__row">
+                        <div class = "news_section__block news_section__in_column">
+                            <p class = "news_section__block_date" id = "blog_date">13 дек 2020</p>
+                            <div class = "news_section__block_info">
+                                <h2 class = "block_info__title">Управление ИТ-активами - скучная рутина или творческая задача?</h2>
+                                <p class = "block_info__description">Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по ИТ-мощностям в крупной компании периодически готовил толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив проверить, нужен ли он вообще.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "news_section__row column2">
+                        <div class = "news_section__block column2__biggest">
+                            <p class = "news_section__block_date" id = "blog_date">13 дек 2020</p>
+                            <div class = "news_section__block_info">
+                                <h2 class = "block_info__title">Управление ИТ-активами - скучная рутина или творческая задача?</h2>
+                                <p class = "block_info__description">Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по ИТ-мощностям в крупной компании периодически готовил толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив проверить, нужен ли он вообще.</p>
+                            </div>
+                        </div>
+                        <div class = "news_section__block column2__smallest">
+                            <h2 class = "block_info__title">ITAM&SAMDay - самая настоящая удача!</h2>
+                            <p class = "news_section__block_date" id = "blog_date">13 дек 2020</p>
+                        </div>
+                    </div>
+                </section>
+                <article class = "article"></article>
+            </div>
+        </main>
     </body>
 </html>

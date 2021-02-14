@@ -1,0 +1,111 @@
+:root {
+    font-size: calc(1.3em + .3vw);
+    --main_color: #535c60;
+    --uncommon_color: #6d7f8f;
+}
+
+/* NEWS */
+.news { background-color: #E5E5E5; }
+
+.grid_container {
+    padding: 0 .5rem;
+    padding-top: 1.3rem;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: .7rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.news_section { 
+    grid-column: 1 / 8;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.article { grid-column: 8 / 11; }
+
+.news_section__row {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr;
+    grid-gap: .7rem;
+    margin-bottom: 1rem;
+}
+
+.news_section__in_column { grid-column: 1 / 4; }
+
+.column2 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr;
+}
+
+.column2__biggest { grid-column: 1 / 3; }
+
+.column2__smallest { 
+    grid-column: 3 / 4;
+    color: #fff;
+    background-color: var(--uncommon_color) !important;
+}
+
+.column2__smallest .block_info__description { color: #fff }
+
+.column2__smallest .news_section__block_date {
+    position: absolute;
+    color: #fff;
+    left: 1rem !important;
+    bottom: 1rem !important;
+}
+
+.news_section__block {
+    padding: 2rem 1.4rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+    top: 0; left: 0;
+    cursor: pointer;
+}
+
+.news_section__block_date {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: .8rem;
+    color: #aaa
+}
+
+.block_info__title {
+    font-weight: normal;
+    font-size: 1.1rem;
+    padding-top: .5rem;
+}
+
+.block_info__description {
+    font-size: .8rem;
+    color: #777;
+    margin-top: .4rem;
+}
+
+@media (max-width: 650px) {
+    .column2 { grid-template-rows: 1fr auto; }
+
+    .column2__biggest { grid-column: 1 / 4; grid-row: 1 / 2; }
+
+    .column2__smallest { grid-column: 1 / 4; grid-row: 2 / 3; }
+}
+
+@media (max-width: 1000px) {
+    .grid_container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .article {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+}
