@@ -1,9 +1,3 @@
-// All news
-let news = [{name: "Релиз GTA 6!", description: "Релизнули GTA 6! Не обман точно!", date: "12/02/21"},
-            {name: "STALKER 2 не выйдет?", description: "STALKER 2 не выйдет, сообщили разработчики, по причи..", date: "23/09/20"},
-            {name: "Cyberpunk 2077 не выйдет?", description: "Не актуально", date: "09/12/20"}
-]
-
 function RemoveElementfromString (string, array_of_elements) {
     for (let i = 0; i < array_of_elements.length; i++) string = string.replace(array_of_elements[i], "");
     return string;
@@ -41,7 +35,7 @@ window.onload = function () {
                     <p class = "block_results__result_description">${news[search_includes_info[i]].description}</p>
                 </div>`
             }
-        } else { document.getElementById("search_results").innerHTML = "По вашему запросу ничего не найдено"; console.log("1"); }
+        } else { document.getElementById("search_results").innerHTML = "По вашему запросу ничего не найдено"; }
     }
 
 }

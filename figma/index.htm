@@ -9,6 +9,7 @@
         <meta name = "author" content = "Maxim Byshyev">
         <link href = "styles/reset.css" rel = "stylesheet" type = "text/css">
         <link href = "styles/main.css" rel = "stylesheet" type = "text/css">
+        <script src = "scripts/sort_news.js" type = "text/javascript"></script>
     </head>
     <body>
         <header class = "header">
@@ -25,7 +26,10 @@
                     <li class = "nav_list__element phone_number">+7 (987) 887-87</li>
                 </ul>
             </nav>
-            <div class = "header__main_image"></div>
+            <div class = "header_image">
+                <div class = "header__main_image" id = "main_bg"></div>
+                <div class = "loading_block" id = "loading_block"></div>
+            </div>
         </header>
         <div class = "modal_window" id = "modal_window">
             <div class = "modal_window__block">

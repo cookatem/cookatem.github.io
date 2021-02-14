@@ -1,7 +1,7 @@
 :root {
     font-size: calc(1.3em + .3vw);
-    --main_color: #4e5e78;
-    --uncommon_color: #d9a374;
+    --main_color: #535c60;
+    --uncommon_color: #6d7f8f;
 }
 
 @font-face { 
@@ -103,17 +103,24 @@ body {
     margin-top: .5rem;
     background-color: #fff;
     width: 90%;
-    padding: 1rem;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.modal_window__block_results > * + * { margin-top: .8rem; }
+.modal_window__block_results > * {padding: .3rem;}
 
-.block_results__result { cursor: pointer; }
+.block_results__result { cursor: pointer; padding: 1rem 1rem; margin-bottom: .2rem; }
+
+.block_results__result:hover .block_results__result_title { color: var(--main_color); }
+
+.modal_window__block_results > * + * { padding-top: 0 !important; }
 
 .block_results__result_title {
     font-size: 1.3rem;
     font-weight: normal;
+    transition: color .2s ease-in-out;
 }
 
 .block_results__result_description {
@@ -157,6 +164,13 @@ body {
     outline: none;
     border: 0;
     cursor: pointer;
+}
+
+.header_image {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
 }
 
 .block_submit__img { margin-left: .3rem; transform: translateY(.05rem); }
@@ -204,7 +218,26 @@ body {
     bottom: -.15rem;
 }
 
-.header__main_image { background: var(--main_color) url(../img/main-bg.webp) top no-repeat; background-size: cover; }
+.header__main_image {
+    background: url(../img/main-bg.webp) center no-repeat;
+    background-size: cover;
+}
+
+.loading_block {
+    background-color: var(--main_color);
+    position: absolute;
+    top: 0;
+    left: 0s;
+    height: 20rem;
+    width: 100%;
+}
+
+.is_load { animation: LoadAnimation .5s ease-in-out; left: 100vw; }
+
+@keyframes LoadAnimation {
+    0% { left: 0; }
+    100% { left: 100vw; }
+}
 
 .window__block_search {
     font-family: FuturaPT, sans-serif;
@@ -212,7 +245,7 @@ body {
     transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
 }
 
-.show { animation: ShowElement .5s ease-in-out; }
+.show { animation: ShowElement .8s ease-in-out; opacity: 1; }
 
 @keyframes ShowElement {
     0% { opacity: 0; }
