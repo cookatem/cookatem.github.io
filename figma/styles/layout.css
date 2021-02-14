@@ -43,22 +43,50 @@
     grid-row: 1fr;
 }
 
-.column2__biggest { grid-column: 1 / 3; }
+.column2__biggest1 { grid-column: 1 / 3; }
 
-.column2__smallest { 
+.column2__smallest2 { 
     grid-column: 3 / 4;
     color: #fff;
     background-color: var(--uncommon_color) !important;
 }
 
-.column2__smallest .block_info__description { color: #fff }
+.column2__smallest2 .block_info__description { color: #fff }
 
-.column2__smallest .news_section__block_date {
+.column2__smallest2 .news_section__block_date {
     position: absolute;
     color: #fff;
     left: 1rem !important;
     bottom: 1rem !important;
 }
+
+.column2__biggest2 { grid-column: 2 / 4; }
+
+.column2__smallest1 { 
+    grid-column: 1 / 2;
+    color: #fff;
+    background-color: var(--uncommon_color) !important;
+}
+
+.column2__smallest1 .block_info__description { color: #fff }
+
+.column2__smallest1 .news_section__block_date {
+    position: absolute;
+    color: #fff;
+    left: 1rem !important;
+    bottom: 1rem !important;
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.row2:first-child { grid-row: 1 / 2; }
+
+.row2 > * + * { grid-row: 2 / 3; }
 
 .news_section__block {
     padding: 2rem 1.4rem;
@@ -67,7 +95,10 @@
     position: relative;
     top: 0; left: 0;
     cursor: pointer;
+    transition: box-shadow .2s ease-in-out;
 }
+
+.news_section__block:hover { box-shadow: 0 0 .4rem rgba(0, 0, 0, .1); }
 
 .news_section__block_date {
     position: absolute;
@@ -75,6 +106,16 @@
     right: 1rem;
     font-size: .8rem;
     color: #aaa
+}
+
+.have_background1 {
+    background: var(--main_color) url(../img/blogs_photos/aEdaefX.jpg) bottom no-repeat;
+    background-size: cover;
+}
+
+.have_background2 {
+    background: var(--main_color) url(../img/blogs_photos/ozfle3xw9my.jpg) bottom no-repeat;
+    background-size: cover;
 }
 
 .block_info__title {
@@ -92,9 +133,10 @@
 @media (max-width: 650px) {
     .column2 { grid-template-rows: 1fr auto; }
 
-    .column2__biggest { grid-column: 1 / 4; grid-row: 1 / 2; }
+    .column2__biggest1, .column2__biggest2 { grid-column: 1 / 4; grid-row: 1 / 2; }
 
-    .column2__smallest { grid-column: 1 / 4; grid-row: 2 / 3; }
+    .column2__smallest2, .column2__smallest1 { grid-column: 1 / 4; grid-row: 2 / 3; }
+
 }
 
 @media (max-width: 1000px) {
