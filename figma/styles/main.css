@@ -20,38 +20,10 @@ body {
     font-size: .9rem;
 }
 
-.header-nav {
-    padding: .75rem .7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .main-container {
     max-width: 1270px;
     margin: 0 auto;
 }
-
-.user_avatar { 
-    display: flex;
-    position: relative;
-    cursor: pointer;
-}
-
-.user_avatar__img {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-}
-
-.user_avatar__status {
-    width: .9rem;
-    height: .9rem;
-    border-radius: 50%;
-    transition: transform .2s ease-in-out;
-}
-
-.user_avatar:hover .user_avatar__status { transform: scale(1.1); }
 
 .modal_window {
     position: fixed;
@@ -170,37 +142,9 @@ body {
     cursor: pointer;
 }
 
-.header_image {
-    position: relative;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-}
-
 .block_submit__img { margin-left: .3rem; transform: translateY(.05rem); }
 
-.nav_list {
-    margin-left: auto;
-    display: flex;
-}
-
-.nav_list > * + * { margin-left: .7rem; }
-
-.header__main_image { height: 20rem; }
-
 @media (max-width: 768px) {
-
-    .header-nav { flex-direction: column; }
-
-    .user_avatar { margin: 0 auto .8rem; }
-
-    .nav_list {
-        justify-content: center;
-        text-align: center;
-        flex-wrap: wrap;
-        margin: 0;
-        width: 100%;
-    }
 
     .modal_window__block { flex-direction: column; height: 8.6rem; }
 
@@ -210,23 +154,6 @@ body {
 }
 
 /* MEDIA */
-.user_avatar__img {
-    background: var(--main_color) url(../img/avatar.jpg) center no-repeat;
-    background-size: cover;
-}
-
-.user_avatar__status {
-    background-color: var(--uncommon_color);
-    position: absolute;
-    right: -.1rem;
-    bottom: -.15rem;
-}
-
-.header__main_image {
-    background: url(../img/main-bg.webp) center no-repeat;
-    background-size: cover;
-}
-
 .loading_block {
     background-color: var(--main_color);
     position: absolute;
@@ -274,28 +201,8 @@ body {
     box-shadow: 0 0 .3rem rgba(78, 94, 120, .4);
 }
 
-.nav_list__element { 
-    font-size: 1rem;
-    cursor: pointer;
-    transition: opacity .2s ease-in-out;
-}
-
 .modal_window__block {
     background-color: #fff;
     border-radius: 1.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
-}
-
-.nav_list__element:hover {
-    opacity: .75;
-}
-
-.phone_number {
-    color: var(--main_color);
-    margin-left: 1rem;
-}
-
-.active { 
-    color: var(--main_color);
-    text-decoration: underline;
 }

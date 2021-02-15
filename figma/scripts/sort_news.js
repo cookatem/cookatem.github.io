@@ -1,5 +1,4 @@
 
-
 // Return biggest time in index from list
 function DateComparison (list) {
     let days = [];
