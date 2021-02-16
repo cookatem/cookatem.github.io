@@ -85,6 +85,14 @@ body {
     align-items: center;
 }
 
+.input_mini_inline {
+    width: 100% !important;
+    height: 2.3rem !important;
+    font-size: .85rem !important;
+}
+
+.news_section__block__unactive .block_submit__img { width: .75rem; height: .75rem; }
+
 .modal_window__block_results > * {padding: .3rem;}
 
 .block_results__result { cursor: pointer; padding: 1rem 1rem; margin-bottom: .2rem; width: 100%; }
