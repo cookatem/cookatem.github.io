@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "ru">
+    <head>
+        <title>Контакты - Блоги 2020 года</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0">
+        <meta name = "description" content = "Блоги, новости о мире">
+        <meta name = "keywords" content = "Блог, Blog, Новости, News">
+        <meta name = "author" content = "Maxim Byshyev">
+        <link href = "../styles/reset.css" rel = "stylesheet" type = "text/css">
+        <link href = "../styles/main.css" rel = "stylesheet" type = "text/css">
+        <link href = "../styles/header.css" rel = "stylesheet" type = "text/css">
+        <link href = "../styles/footer.css" rel = "stylesheet" type = "text/css">
+        <link href = "../styles/font-awesome.min.css" rel = "stylesheet" type = "text/css">
+    </head>
+    <body>
+        <header class = "header">
+            <nav class = "header-nav main-container">
+                <label class = "user_avatar show">
+                    <div class = "user_avatar__img"></div>
+                    <div class = "user_avatar__status"></div>
+                </label>
+                <ul class = "nav_list show">
+                    <li class = "nav_list__element"><a href = "../index.htm">Главная</a></li>
+                    <li class = "nav_list__element">О нас</li>
+                    <li class = "nav_list__element active"><a href = "#">Контакты</a></li>
+                    <li class = "nav_list__element" onclick = "ModalWindow('modal_window', true);">Поиск</li>
+                    <li class = "nav_list__element phone_number">+7 (987) 887-87</li>
+                </ul>
+            </nav>
+        </header>
+        <main class = "contacts">
+            <div class = "main-container contacts_container">
+                <section class = "contacts__info show">
+                    <h2 class = "title_notification">Контактная информация</h2>
+                    <p class = "contacts__info_point phone_number">+7 (987) 887-87</p>
+                    <p class = "contacts__info_point">г. Санкт Петербург, ул. Ленина, 9</p>
+                    <ul class = "contacts__info__communicates">
+                        <li><i class = "contacts__info__communicate_ico fa fa-facebook"></i></li>
+                        <li><i class = "contacts__info__communicate_ico fa fa-vk"></i></li>
+                        <li><i class = "contacts__info__communicate_ico fa fa-instagram"></i></li>
+                        <li><i class = "contacts__info__communicate_ico fa fa-twitter"></i></li>
+                    </ul>
+                </section>
+                <section class = "news_section__block news_section__block__unactive show">
+                    <h2 class = "title_notification">Напишите нам</h2>
+                    <input class = "window__block_search input_mini_inline" placeholder = "Ваше имя" id = "user_name" name = "name">
+                    <input class = "window__block_search input_mini_inline" placeholder = "Телефон или E-mail" id = "user_email" name = "email">
+                    <input class = "window__block_search input_big_inline" placeholder = "Сообщение.." id = "user_message" name = "message">
+                    <button name = "submit" class = "window__block_submit input_mini_inline" id = "submit_search">Искать<img class = "block_submit__img" src = "../img/subscribe.png" alt = "search"></button>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

@@ -91,6 +91,12 @@ body {
     font-size: .85rem !important;
 }
 
+.input_big_inline { 
+    height: 3.7rem !important;
+    font-size: .85rem !important;
+    width: 100% !important;
+}
+
 .news_section__block__unactive .block_submit__img { width: .75rem; height: .75rem; }
 
 .modal_window__block_results > * {padding: .3rem;}
@@ -213,4 +219,93 @@ body {
     background-color: #fff;
     border-radius: 1.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+}
+
+.contacts { background: #E5E5E5;  }
+
+.contacts_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 2rem 1rem;
+}
+
+.contacts_container > * { width: 50%; }
+
+.contacts__info > .phone_number { margin: 0 !important; }
+
+.contacts__info_point { padding: 0 0 .5rem .4rem; color: var(--uncommon_color) !important; transition: opacity .2s ease-in-out; }
+
+.contacts__info_point:hover { opacity: .8; }
+
+.contacts__info__communicates_communicate_img { width: 1rem; height: 1rem; }
+
+.title_notification {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.news_section__block__unactive {
+    cursor: auto !important;
+    transition: none !important;
+    box-shadow: 0 0 .9rem rgba(0, 0, 0, .2) !important;
+}
+
+.news_section__block__unactive:hover { box-shadow: 0 0 .9rem rgba(0, 0, 0, .2) !important; }
+
+.news_section__block {
+    padding: 2rem 1.4rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+    top: 0; left: 0;
+    cursor: pointer;
+    transition: box-shadow .2s ease-in-out;
+}
+
+.news_section__block:hover { box-shadow: 0 0 .4rem rgba(0, 0, 0, .2); }
+
+.contacts__info__communicates {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts__info__communicates > * {
+    width: 1.65rem;
+    height: 1.65rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--uncommon_color);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: .8rem;
+    color: #fff;
+    margin: 1rem 0 0 .4rem;
+    transition: transform .15s ease-in-out;
+}
+
+.contacts__info__communicates > *:hover { transform: scale(1.1); }
+
+.contacts_container .input_mini_inline { margin-bottom: .6rem; }
+
+.contacts_container .input_big_inline { margin-bottom: .6rem; }
+
+@media (max-width: 768px) {
+    .contacts_container { flex-direction: column-reverse; }
+
+    .contacts_container > * { width: 100%; }
+
+    .contacts__info { text-align: center; margin-top: 3rem; }
+
+    .contacts__info__communicates { justify-content: center; }
 }
