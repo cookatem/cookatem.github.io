@@ -50,6 +50,15 @@
                     <button name = "submit" class = "window__block_submit input_mini_inline" id = "submit_search">Искать<img class = "block_submit__img" src = "../img/subscribe.png" alt = "search"></button>
                 </section>
             </div>
+            <div class = "modal_window" id = "modal_window">
+                <div class = "modal_window__block">
+                    <input class = "window__block_search" placeholder = "Введите свой запрос.." id = "search_block" name = "request">
+                    <button name = "submit" class = "window__block_submit" id = "submit_search">Искать<img class = "block_submit__img" src = "../img/search.png" alt = "search"></button>
+                    <div class = "close_button" onclick = "ModalWindow('modal_window', false);">&#10006;</div>
+                </div>
+                <div class = "modal_window__block_results" id = "search_results"></div>
+            </div>
+            <script src = "../scripts/script.js" type = "text/javascript"></script>
         </main>
     </body>
 </html>
