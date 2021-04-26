@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Bloxer - Blog</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com">
+        <link href = "https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Work+Sans&display=swap" rel = "stylesheet">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <link rel = "shortcut icon" href="images/logo.jpg">
+        <link href = "styles/reset.css" rel = "stylesheet" type = "text/css">
+        <link href = "styles/main.css" rel = "stylesheet" type = "text/css">
+        <script type = "text/javascript" src = "scripts/script.js"></script>
+    </head>
+    <body>
+        <header class = "container header_container">
+            <div class = "menu_ico">
+                <div class = "menu_ico__line"></div>
+                <div class = "menu_ico__line small"></div>
+                <div class = "menu_ico__line"></div>
+            </div>
+            <i class="fi-rr-search" id = "search_button" onclick = "changeElement('search_window', element => element.classList.toggle('active'));"></i>
+        </header>
+        <div class = "modal-window_container" id = "search_window">
+            <form action = "" class = "form_container">
+                <input type = "text" name = "search_value" placeholder = "Search here..." class = "input_element">
+                <button class = "confirm_button" type="submit"><i class="fi-rr-search"></i></button>
+            </form>
+            <i class="fi-rr-cross close_button" onclick = "changeElement('search_window', element => element.classList.remove('active'))"></i>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+:root {
+    font-size: calc(.9em + .6vw);
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: .9rem;
+}
+
+.container {
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    position: relative;
+    top: 0; left: 0;
+}
+
+.main_container { max-width: 1400px; }
+.header_container { 
+    max-width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-window_container {
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    left: 40vw;
+    right: 40vw;
+    opacity: 0;
+    bottom: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: opacity .4s ease-in-out,
+                left .4s ease-in-out,
+                right .4s ease-in-out,
+                bottom .4s ease-in-out
+    ;
+}
+
+.modal-window_container.active {
+    opacity: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.form_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_element {
+    display: block;
+    width: 70vw;
+    height: 2.6rem;
+    border-top-left-radius: .7rem;
+    border-bottom-left-radius: .7rem;
+    padding: 0 1rem;
+    font-size: .8rem;
+    font-family: 'Work Sans', sans-serif;
+    outline: none;
+    border: none;
+}
+
+.confirm_button {
+    background-color: #fff;
+    border-top-right-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+    height: 2.6rem;
+    width: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+header > * { cursor: pointer; }
+
+/*MEDIA*/
+.menu_ico {
+    width: 1.3rem;
+    height: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.menu_ico__line {
+    height: .1rem;
+    width: 100%;
+    background-color: #222;
+}
+
+.menu_ico__line.small { width: 75%; transition: width .2s ease-in-out; }
+.menu_ico:hover .menu_ico__line.small { width: 100%; }
+header i { transition: transform .2s ease-in-out; }
+header i:hover { transform: rotate(5deg); }
+
+.close_button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+}
