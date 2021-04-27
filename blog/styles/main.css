@@ -33,6 +33,7 @@ body {
 .slider-container__trackline {
     height: 100%;
     display: flex;
+    transition: transform .3s ease-in-out;
 }
 
 .modal-window_container {
@@ -164,7 +165,9 @@ ul.menu_block__list .menu_block__list_element + .menu_block__list_element { marg
     height: 100%;
     width: 100%;
     min-width: 100%;
-    background: url(../images/slider-images/1.jpg) center no-repeat;
+    background-color: #777;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -174,20 +177,21 @@ ul.menu_block__list .menu_block__list_element + .menu_block__list_element { marg
 .trackline_item__information {
     padding: 1rem 3rem;
     background-color: #fff;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 .trackline_item__information__title {
     text-align: center;
     font-weight: normal;
     position: relative;
-    font-family: 'Gloria Hallelujah', sans-serif;
 }
 
 .trackline_item__information__reading {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    color: #666;
+    color: #999;
     font-size: .7rem;
     margin-bottom: .3rem;
 }

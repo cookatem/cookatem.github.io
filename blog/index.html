@@ -42,7 +42,25 @@
         </div>
         <main class = "container main_container">
             <div class = "slider-container">
-                <div class = "slider-container__trackline">
+                <div class = "slider-container__trackline" id = "slider_trackline">
+                    <div class = "slider-container__trackline_item">
+                        <div class = "trackline_item__information">
+                            <div class = "trackline_item__information__reading">
+                                <p id = "container-postdate">April 3, 2019</p>
+                                <p id = "container-postread">2 Mins Read</p>
+                            </div>
+                            <h2 class = "trackline_item__information__title">Choosing The Right Glass Shape</h2>
+                        </div>
+                    </div>
+                    <div class = "slider-container__trackline_item">
+                        <div class = "trackline_item__information">
+                            <div class = "trackline_item__information__reading">
+                                <p id = "container-postdate">April 3, 2019</p>
+                                <p id = "container-postread">2 Mins Read</p>
+                            </div>
+                            <h2 class = "trackline_item__information__title">Choosing The Right Glass Shape</h2>
+                        </div>
+                    </div>
                     <div class = "slider-container__trackline_item">
                         <div class = "trackline_item__information">
                             <div class = "trackline_item__information__reading">
@@ -53,8 +71,8 @@
                         </div>
                     </div>
                 </div>
-                <button class = "slider_button button_left" id = "slide_return"><i class="fi-rr-angle-left"></i></button>
-                <button class = "slider_button button_right" id = "slide_skip"><i class="fi-rr-angle-right"></i></button>
+                <button class = "slider_button button_left" id = "slide_return" onclick = "trackSlider(position => --position)"><i class="fi-rr-angle-left"></i></button>
+                <button class = "slider_button button_right" id = "slide_skip" onclick = "trackSlider(position => ++position)"><i class="fi-rr-angle-right"></i></button>
             </div>
         </main>
     </body>
