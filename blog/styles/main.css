@@ -26,27 +26,53 @@ body {
 
 .modal-window_container {
     position: fixed;
-    background-color: #000;
     top: 0;
-    left: 40vw;
-    right: 40vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.search_window {
+    background-color: #000;
     opacity: 0;
     bottom: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     transition: opacity .4s ease-in-out,
-                left .4s ease-in-out,
-                right .4s ease-in-out,
-                bottom .4s ease-in-out
-    ;
+                bottom .4s ease-in-out;
 }
 
-.modal-window_container.active {
-    opacity: 1;
-    left: 0;
+.menu_modal_window {
+    left: 100vw;
+    background-color: rgba(0, 0, 0, .25);
+    transition: left .6s ease-in-out;
+}
+
+.menu_block {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 100vw;
     right: 0;
+    z-index: 1000;
+    transition: left .7s ease-in-out;
+    overflow: hidden;
+    border-left: rgba(0, 0, 0, .25) solid 1px;
+}
+
+@media (max-width: 300px) {
+    .menu_block.active { left: 0 !important; }
+}
+
+.menu_block.active { left: calc(100vw - 15rem); }
+.menu_modal_window.active { left: 0; }
+
+.search_window.active {
+    opacity: 1;
     bottom: 0;
 }
 
@@ -54,6 +80,38 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+header > * { cursor: pointer; }
+
+/*MEDIA*/
+.menu_ico {
+    width: 1.3rem;
+    height: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.menu_ico__line {
+    height: .1rem;
+    width: 100%;
+    background-color: #222;
+}
+
+.menu_ico__line.small { width: 75%; transition: width .2s ease-in-out; }
+.menu_ico:hover .menu_ico__line.small { width: 100%; }
+.menu_ico.active .menu_ico__line.small { width: 100%; }
+header i { transition: transform .2s ease-in-out; }
+header i:hover { transform: rotate(5deg); }
+
+.absolute-top_button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.8rem;
+    color: #fff;
+    cursor: pointer;
 }
 
 .input_element {
@@ -84,33 +142,9 @@ body {
     cursor: pointer;
 }
 
-header > * { cursor: pointer; }
-
-/*MEDIA*/
-.menu_ico {
-    width: 1.3rem;
-    height: .8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+ul.menu_block__list {
+    padding: 6rem 1.7rem 0;
+    text-transform: uppercase;
 }
 
-.menu_ico__line {
-    height: .1rem;
-    width: 100%;
-    background-color: #222;
-}
-
-.menu_ico__line.small { width: 75%; transition: width .2s ease-in-out; }
-.menu_ico:hover .menu_ico__line.small { width: 100%; }
-header i { transition: transform .2s ease-in-out; }
-header i:hover { transform: rotate(5deg); }
-
-.close_button {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.8rem;
-    color: #fff;
-    cursor: pointer;
-}
+ul.menu_block__list .menu_block__list_element + .menu_block__list_element { margin-top: .8rem; }

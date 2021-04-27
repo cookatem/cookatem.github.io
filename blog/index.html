@@ -14,19 +14,31 @@
     </head>
     <body>
         <header class = "container header_container">
-            <div class = "menu_ico">
+            <div class = "menu_ico" id = "menu_ico" onclick = "changeElement(['menu_block', 'menu_modal_window', 'menu_ico'], element => element?.classList.toggle('active'));">
                 <div class = "menu_ico__line"></div>
                 <div class = "menu_ico__line small"></div>
                 <div class = "menu_ico__line"></div>
             </div>
-            <i class="fi-rr-search" id = "search_button" onclick = "changeElement('search_window', element => element.classList.toggle('active'));"></i>
+            <i class="fi-rr-search" onclick = "changeElement(['search_window'], element => element?.classList.toggle('active'));"></i>
         </header>
-        <div class = "modal-window_container" id = "search_window">
+        <div class = "menu_container">
+            <div class = "modal-window_container menu_modal_window" id = "menu_modal_window"></div>
+            <div class = "menu_block" id = "menu_block">
+                <ul class = "menu_block__list">
+                    <li class = "menu_block__list_element"><a href = "#">Home</a></li>
+                    <li class = "menu_block__list_element"><a href = "#">About</a></li>
+                    <li class = "menu_block__list_element"><a href = "#">Blog</a></li>
+                    <li class = "menu_block__list_element"><a href = "#">Contact</a></li>
+                </ul>
+                <i class="fi-rr-cross absolute-top_button" style = "color: black;" onclick = "changeElement(['menu_block', 'menu_modal_window', 'menu_ico'], element => element?.classList.remove('active'));"></i>
+            </div>
+        </div>
+        <div class = "modal-window_container search_window" id = "search_window">
             <form action = "" class = "form_container">
                 <input type = "text" name = "search_value" placeholder = "Search here..." class = "input_element">
                 <button class = "confirm_button" type="submit"><i class="fi-rr-search"></i></button>
             </form>
-            <i class="fi-rr-cross close_button" onclick = "changeElement('search_window', element => element.classList.remove('active'))"></i>
+            <i class="fi-rr-cross absolute-top_button" onclick = "changeElement(['search_window'], element => element?.classList.remove('active'))"></i>
         </div>
     </body>
 </html>
