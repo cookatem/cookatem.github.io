@@ -24,6 +24,17 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
+.slider-container {
+    height: 25rem;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.slider-container__trackline {
+    height: 100%;
+    display: flex;
+}
+
 .modal-window_container {
     position: fixed;
     top: 0;
@@ -148,3 +159,68 @@ ul.menu_block__list {
 }
 
 ul.menu_block__list .menu_block__list_element + .menu_block__list_element { margin-top: .8rem; }
+
+.slider-container__trackline_item { 
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    background: url(../images/slider-images/1.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.trackline_item__information {
+    padding: 1rem 3rem;
+    background-color: #fff;
+}
+
+.trackline_item__information__title {
+    text-align: center;
+    font-weight: normal;
+    position: relative;
+    font-family: 'Gloria Hallelujah', sans-serif;
+}
+
+.trackline_item__information__reading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #666;
+    font-size: .7rem;
+    margin-bottom: .3rem;
+}
+
+button.slider_button {
+    background-color: #fff;
+    outline: none; border: none;
+    cursor: pointer;
+    padding: .8rem;
+    opacity: 0;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    transition: color .2s ease-in-out,
+                background-color .2s ease-in-out,
+                opacity .3s ease-in-out;
+}
+
+.slider-container:hover button.slider_button { opacity: 1; }
+
+@media (max-width: 768px) {
+    button.slider_button { opacity: 1; }
+}
+
+button.slider_button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.slider_button.button_left {
+    top: 11rem; left: 1rem;
+}
+
+.slider_button.button_right {
+    top: 11rem; right: 1rem;
+}
