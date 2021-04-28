@@ -177,8 +177,6 @@ ul.menu_block__list .menu_block__list_element + .menu_block__list_element { marg
 .trackline_item__information {
     padding: 1rem 3rem;
     background-color: #fff;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
 }
 
 .trackline_item__information__title {
@@ -221,10 +219,5 @@ button.slider_button:hover {
     color: #fff;
 }
 
-.slider_button.button_left {
-    top: 11rem; left: 1rem;
-}
-
-.slider_button.button_right {
-    top: 11rem; right: 1rem;
-}
+.slider_button.button_left { top: 11rem; left: 1rem; }
+.slider_button.button_right { top: 11rem; right: 1rem; }

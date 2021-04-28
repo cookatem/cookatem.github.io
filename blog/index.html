@@ -14,12 +14,12 @@
     </head>
     <body>
         <header class = "container header_container">
-            <div class = "menu_ico" id = "menu_ico" onclick = "changeElement(['menu_block', 'menu_modal_window', 'menu_ico'], element => element?.classList.toggle('active'));">
+            <div class = "menu_ico" id = "menu_ico" onclick = "getElement(['menu_block', 'menu_modal_window', 'menu_ico'], element => element?.classList.toggle('active'));">
                 <div class = "menu_ico__line"></div>
                 <div class = "menu_ico__line small"></div>
                 <div class = "menu_ico__line"></div>
             </div>
-            <i class="fi-rr-search" onclick = "changeElement(['search_window'], element => element?.classList.toggle('active'));"></i>
+            <i class="fi-rr-search" onclick = "getElement(['search_window'], element => element?.classList.toggle('active'));"></i>
         </header>
         <div class = "menu_container">
             <div class = "modal-window_container menu_modal_window" id = "menu_modal_window"></div>
@@ -30,7 +30,7 @@
                     <li class = "menu_block__list_element"><a href = "#">Blog</a></li>
                     <li class = "menu_block__list_element"><a href = "#">Contact</a></li>
                 </ul>
-                <i class="fi-rr-cross absolute-top_button" style = "color: black;" onclick = "changeElement(['menu_block', 'menu_modal_window', 'menu_ico'], element => element?.classList.remove('active'));"></i>
+                <i class="fi-rr-cross absolute-top_button" style = "color: black;" onclick = "getElement(['menu_block', 'menu_modal_window', 'menu_ico'], element => element?.classList.remove('active'));"></i>
             </div>
         </div>
         <div class = "modal-window_container search_window" id = "search_window">
@@ -38,15 +38,15 @@
                 <input type = "text" name = "search_value" placeholder = "Search here..." class = "input_element">
                 <button class = "confirm_button" type="submit"><i class="fi-rr-search"></i></button>
             </form>
-            <i class="fi-rr-cross absolute-top_button" onclick = "changeElement(['search_window'], element => element?.classList.remove('active'))"></i>
+            <i class="fi-rr-cross absolute-top_button" onclick = "getElement(['search_window'], element => element?.classList.remove('active'))"></i>
         </div>
         <main class = "container main_container">
-            <div class = "slider-container">
+            <div class = "slider-container" id = "slider">
                 <div class = "slider-container__trackline" id = "slider_trackline">
                     <div class = "slider-container__trackline_item">
                         <div class = "trackline_item__information">
                             <div class = "trackline_item__information__reading">
-                                <p id = "container-postdate">April 3, 2019</p>
+                                <p id = "container-postdate">April 2, 2019</p>
                                 <p id = "container-postread">2 Mins Read</p>
                             </div>
                             <h2 class = "trackline_item__information__title">Choosing The Right Glass Shape</h2>
@@ -58,7 +58,7 @@
                                 <p id = "container-postdate">April 3, 2019</p>
                                 <p id = "container-postread">2 Mins Read</p>
                             </div>
-                            <h2 class = "trackline_item__information__title">Choosing The Right Glass Shape</h2>
+                            <h2 class = "trackline_item__information__title">Mountain climbing holidays: Mont Blanc</h2>
                         </div>
                     </div>
                     <div class = "slider-container__trackline_item">
@@ -67,12 +67,12 @@
                                 <p id = "container-postdate">April 3, 2019</p>
                                 <p id = "container-postread">2 Mins Read</p>
                             </div>
-                            <h2 class = "trackline_item__information__title">Choosing The Right Glass Shape</h2>
+                            <h2 class = "trackline_item__information__title">This Beauty Brand Tackles Skincare From</h2>
                         </div>
                     </div>
                 </div>
-                <button class = "slider_button button_left" id = "slide_return" onclick = "trackSlider(position => --position)"><i class="fi-rr-angle-left"></i></button>
-                <button class = "slider_button button_right" id = "slide_skip" onclick = "trackSlider(position => ++position)"><i class="fi-rr-angle-right"></i></button>
+                <button class = "slider_button button_left" id = "slide_return" onclick = "trackSlider(position => --position);"><i class="fi-rr-angle-left"></i></button>
+                <button class = "slider_button button_right" id = "slide_skip" onclick = "trackSlider(position => ++position);"><i class="fi-rr-angle-right"></i></button>
             </div>
         </main>
     </body>
