@@ -1,0 +1,80 @@
+:root {
+    font-size: calc(.7vw + .5em);
+    --game-area-color: #fff;
+    --game-element-color: #333;
+}
+
+body {
+    height: 100vh;
+    font-size: 2rem;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.main-container {
+    height: 100%;
+    background: url(../img/1.jpg) center no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .main-container { flex-direction: column; }
+}
+
+.main-container > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: .5rem;
+    height: 30rem;
+    min-width: 30rem;
+}
+
+.game-area__element {
+    background-color: var(--game-area-color);
+    color: var(--game-element-color);
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.game-count { 
+    font-size: 3rem;
+    font-family: 'Gloria Hallelujah', sans-serif;
+}
+
+.game-placeholder {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.game-area__element > * {
+    font-size: 0;
+    opacity: 0;
+    transition: font-size .4s ease-in-out,
+                opacity .3s ease-in-out;
+}
+
+.game-area__element.cross-active .cross-element {
+    font-size: 3.5rem;
+    opacity: 1;
+}
+
+.game-area__element.circle-active .circle-element {
+    font-size: 3.5rem;
+    opacity: 1;
+}
