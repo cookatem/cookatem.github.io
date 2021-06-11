@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang = "ru">
     <head>
-        <title>Все боссы в игре Bloodborne</title>
+        <title>Все боссы в игре Bloodborne (советы и тактики)</title>
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0">
-        <link rel = "preconnect" href = "https://fonts.gstatic.com">
-        <link href = "https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel = "stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+        <link rel = "shortcut icon" href = "images/icon.ico">
         <link href = "styles/reset.css" rel = "stylesheet" type = "text/css">
         <link href = "styles/main.css" rel = "stylesheet" type = "text/css">
     </head>
@@ -27,7 +28,7 @@
                         <div class = "slider-button slider-button-right" onclick = "slideElement(document.getElementsByClassName('slider-container__trackline')[0], position => position + 1)"></div>
                     </div>
                     <p class = "main-content__block__description">
-                        Первый необязательный босс в игре Bloodborne. Первый викарий Лоуренс в обличье большого чудовища. Из особенностей имеет одну большую руку, которой
+                        Первый необязательный босс в игре Bloodborne. Первый викарий Лоуренс в обличии большого чудовища. Из особенностей имеет одну большую руку, которой
                         он атакует чаще всего и по которой урон от охотника плохо проходит. Если отойти от чудовища, то он прыгнет на охотника, нанеся большой урон ему. Лучше
                         всего бить его по туловищу со спины, отходя от его атак.
                     </p>
@@ -49,7 +50,7 @@
                         <div class = "slider-button slider-button-right" onclick = "slideElement(document.getElementsByClassName('slider-container__trackline')[1], position => position + 1)"></div>
                     </div>
                     <p class = "main-content__block__description">
-                        Первый обязательный босс в игре Bloodborne. Очень быстрый и ловкий охотник на чудовищ, вскоре сам стал чудовищем. Гаскойн имеет 3 тактики боя.
+                        Первый обязательный босс в игре Bloodborne. Очень быстрый и ловкий охотник на чудовищ в итоге сам стал чудовищем. Гаскойн имеет 3 тактики боя.
                         Сначала он использует укороченную версию Секиры и мушкет. Интересно, что после каждого своего уворота Гаскойн стреляет в вас из огнестрельного оружия.
                         Позже он атакует длинной Секирой. Так как битва происходит на кладбище, на протяжении этих двух фаз очень удобно прятаться за надгробиями и наносить удары из длинного
                         оружия по Гаскойну. 
@@ -90,21 +91,33 @@
                 </div>
 
                 <div class = "main-content__block">
-                    <h3 class = "main-content__block__title">3. Чудовище-кровоглот (Blood-Starved beast)</h3>
+                    <h3 class = "main-content__block__title">4. Викарий Амелия (Vicar Amelia)</h3>
                     <div class = "main-content__block__images slider-container">
                         <div class = "slider-container__trackline">
                             <div class = "slider-container__trackline__item"></div>
                             <div class = "slider-container__trackline__item"></div>
                             <div class = "slider-container__trackline__item"></div>
                         </div>
-                        <div class = "slider-button slider-button-left" onclick = "slideElement(document.getElementsByClassName('slider-container__trackline')[2], position => position - 1)"></div>
-                        <div class = "slider-button slider-button-right" onclick = "slideElement(document.getElementsByClassName('slider-container__trackline')[2], position => position + 1)"></div>
+                        <div class = "slider-button slider-button-left" onclick = "slideElement(document.getElementsByClassName('slider-container__trackline')[3], position => position - 1)"></div>
+                        <div class = "slider-button slider-button-right" onclick = "slideElement(document.getElementsByClassName('slider-container__trackline')[3], position => position + 1)"></div>
                     </div>
-                    <p class = "main-content__block__description"></p>
+                    <p class = "main-content__block__description">
+                        Войдя в Главный Собор, можно встретить плачущую девушку, которая сидит около алтаря. Она надевает свой кулон и резко перевоплощается
+                        в крупное существо, которое раньше являлось викарией Амелией. Сам босс очень стильный и пугающий.
+                    </p>
+                    <p class = "main-content__block__description">
+                        Викарий Амелия обладает множеством опасных для охотника атак. Сокрушительный прыжок на игрока, размашистые удары лапами и сильный удар сверху, продолжающийся
+                        на среднюю дистанцию. Также Амелия умеет востанавливать своё здоровье. Чтобы прекратить этот процесс, игрок должен кинуть в существо 
+                        <a href = "https://bloodborne.fandom.com/ru/wiki/Мгла_оцепенения" target = "_blank">Мглу Оцепенения</a>.
+                    </p>
                 </div>
 
             </section>
-            <section class = "other-content"></section>
+            <section class = "other-content">
+                <div class = "other-content__block">
+                    <input class = "input" placeholder = "Поиск.." type = "text" id = "search">
+                </div>
+            </section>
         </main>
         <script type = "text/javascript" src = "script/script.js"></script>
     </body>
