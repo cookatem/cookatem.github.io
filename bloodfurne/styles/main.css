@@ -1,0 +1,156 @@
+:root { font-size: calc(.8em + .5vw); }
+
+body {
+    font-size: 1.1rem;
+    background-color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 2rem 9rem;
+}
+
+a {
+    color: #8C8C8C;
+    text-decoration: underline;
+}
+
+::selection {
+    background: #C2C2C2; /* Safari */
+}
+
+.header-container {
+    width: 100%;
+    min-height: 40vh;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #777;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: #fff;
+    padding-left: 6vw;
+    padding-bottom: 10vh;
+}
+
+.slider {
+    background-image: url(../images/header/bloodborne1.jpg);
+    box-shadow:0 0 0 50vw rgba(0, 0, 0, 0.4) inset;
+    transition: background-image 1s linear;
+}
+
+.main-title {
+    display: block;
+    width: 25rem;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr;
+}
+
+.main-container > .main-content {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.main-container > .other-content {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.main-content__block { margin-top: 2rem; }
+
+.slider-container {
+    min-width: 100%;
+    height: 26rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+    top: 0; left: 0;
+}
+
+.slider-container__trackline {
+    display: flex;
+    height: 100%;
+    transition: transform .3s ease-in-out;
+}
+
+.slider-container__trackline > .slider-container__trackline__item { 
+    min-width: 100%; height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-content__block__title {
+    margin-bottom: 1rem;
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+.slider-button {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+    cursor: pointer;
+}
+
+.slider-container:hover .slider-button { opacity: .7; }
+.slider-button:hover { transform: scale(1.03); }
+
+.slider-button.slider-button-left {
+    left: 1rem;
+    top: 46%;
+}
+
+.slider-button.slider-button-right {
+    right: 1rem;
+    top: 46%;
+}
+
+.main-content__block__description {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+
+    body { padding: 0; }
+
+    .header-container {
+        padding: 1rem;
+        min-height: 30vh;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+
+    .main-container > .main-content {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    
+    .main-container > .other-content {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .main-content__block { padding: 0 2rem; }
+    .main-content__block__description { font-size: 1.3rem; margin-top: .9rem; }
+    .main-content__block__title { font-size: 1.6rem; }
+}
