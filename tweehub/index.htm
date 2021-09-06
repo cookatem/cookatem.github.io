@@ -3,22 +3,23 @@
     <head>
         <title>TweeHub</title>
         <meta charset = "UTF-8">
-        <link rel = "preconnect" href = "https://fonts.googleapis.com">
-        <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
-        <link href = "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel = "stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap" rel="stylesheet">
         <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0">
         <link href = "images/logo.png" rel = "icon">
         <link href = "styles/reset.css" rel = "stylesheet" type = "text/css">
+        <link href = "styles/animations.css" rel = "stylesheet" type = "text/css">
         <link href = "styles/main.css" rel = "stylesheet" type = "text/css">
         <script src = "scripts/app.js" type = "text/javascript"></script>
     </head>
     <body>
         <header class = "header">
+            <div class = "modal-window hide" id = "main_modal-window"></div>
             <div class = "header-layout">
                 <div class = "logotype"><a href = "index.htm">TweeHub</a></div>
                 <div class = "search-block"><input type = "text" placeholder = "Поиск.." class = "search-input" id = "search-input"></div>
                 <div class = "inline-button m_position-left"><a href = "user/login/login.htm" data-registered = "false">Войти</a></div>
-                <div class = "modal-window hide" id = "main_modal-window"></div>
                 <script type="text/javascript">
                     let input = document.querySelector("#search-input"), 
                     modalWindow = document.querySelector("#main_modal-window");

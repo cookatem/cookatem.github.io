@@ -13,11 +13,13 @@ body {
 header {
     background-color: var(--main-color);
     color: white;
+    position: fixed;
+    left: 0; right: 0; top: 0;
 }
 
 header a { color: white; }
 .m_position-left { margin-left: auto; }
-.logotype { font-size: 1.5rem; font-family: 'Work Sans', sans-serif; font-weight: 400; }
+.logotype { font-size: 1.5rem; font-family: 'Work Sans', sans-serif; font-weight: 700; }
 .search-block { margin: 0 .5rem; width: 700px; height: 1.5rem; }
 input.search-input {
     width: 100%;
@@ -47,11 +49,12 @@ input.search-input::placeholder { color: rgb(167, 167, 167); }
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: top .2s ease-in-out;
+    /* transition: top .2s ease-in-out; */
     overflow: hidden;
+    animation: modalWindowShow .2s ease-in-out; opacity: 1;
 }
 
-.modal-window.hide { top: 100vh; }
+.modal-window.hide { animation: modalWindowHide .2s ease-in-out; top: 100vh; }
 @media (max-width: 500px) {
     body { font-size: 14px; }
     input.search-input { font-size: 14px; }
