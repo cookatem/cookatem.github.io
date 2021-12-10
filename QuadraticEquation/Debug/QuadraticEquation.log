@@ -1,3 +1,0 @@
-﻿  QuadraticEquation.cpp
-D:\Programms\С++\ConsTasks\QuadraticEquation\QuadraticEquation.cpp(9): warning C4172: возвращение адреса локальной или временной переменной : roots
-  QuadraticEquation.vcxproj -> D:\Programms\С++\ConsTasks\QuadraticEquation\Debug\QuadraticEquation.exe
