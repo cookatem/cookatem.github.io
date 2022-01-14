@@ -1,0 +1,11 @@
+D:\Programms\_C#\Projects\TheChristor\bin\Debug\TheChristor.exe.config
+D:\Programms\_C#\Projects\TheChristor\bin\Debug\TheChristor.exe
+D:\Programms\_C#\Projects\TheChristor\bin\Debug\TheChristor.pdb
+D:\Programms\_C#\Projects\TheChristor\obj\Debug\TheChristor.csproj.AssemblyReference.cache
+D:\Programms\_C#\Projects\TheChristor\obj\Debug\TheChristor.csproj.SuggestedBindingRedirects.cache
+D:\Programms\_C#\Projects\TheChristor\obj\Debug\TheChristor.Properties.Resources.resources
+D:\Programms\_C#\Projects\TheChristor\obj\Debug\TheChristor.csproj.GenerateResource.cache
+D:\Programms\_C#\Projects\TheChristor\obj\Debug\TheChristor.csproj.CoreCompileInputs.cache
+D:\Programms\_C#\Projects\TheChristor\obj\Debug\TheChristor.exe
+D:\Programms\_C#\Projects\TheChristor\obj\Debug\TheChristor.pdb
+D:\Programms\_C#\Projects\TheChristor\obj\Debug\TheChristor.app.resources

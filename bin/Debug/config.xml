@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MainColor>
+    <Red>30</Red>
+    <Green>30</Green>
+    <Blue>30</Blue>
+  </MainColor>
+  <FontColor>
+    <Red>221</Red>
+    <Green>221</Green>
+    <Blue>224</Blue>
+  </FontColor>
+  <SecondaryColor>
+    <Red>107</Red>
+    <Green>124</Green>
+    <Blue>138</Blue>
+  </SecondaryColor>
+  <ColorOfDetails>
+    <Red>164</Red>
+    <Green>167</Green>
+    <Blue>176</Blue>
+  </ColorOfDetails>
+  <Size>
+    <Width>1276</Width>
+    <Height>696</Height>
+  </Size>
+  <Location>
+    <X>153</X>
+    <Y>143</Y>
+  </Location>
+</Configuration>
